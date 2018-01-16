@@ -1,5 +1,5 @@
 //
-//  TabNavigationViewController.swift
+//  ExploreViewController.swift
 //  AlgorithmHelper
 //
 //  Created by Eric Liu on 2018-01-16.
@@ -8,18 +8,14 @@
 
 import UIKit
 
-class TabNavigationViewController: UIViewController {
-
+class ExploreViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        print("ExploreView loaded")
+        
+
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+    
 }
-

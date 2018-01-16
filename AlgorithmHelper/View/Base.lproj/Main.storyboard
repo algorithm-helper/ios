@@ -19,7 +19,7 @@
         <!--Settings-->
         <scene sceneID="Fc8-r7-R9t">
             <objects>
-                <viewController id="ajC-4o-yww" sceneMemberID="viewController">
+                <viewController id="ajC-4o-yww" customClass="SettingsViewController" customModule="AlgorithmHelper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="laO-NY-hLD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,7 +53,7 @@
         <!--Bookmarks-->
         <scene sceneID="Xpf-0q-Tl9">
             <objects>
-                <viewController id="DOM-25-HZg" sceneMemberID="viewController">
+                <viewController id="DOM-25-HZg" customClass="BookmarksViewController" customModule="AlgorithmHelper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8iL-3P-DAB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -67,47 +67,55 @@
                                     <navigationItem title="Bookmarks" id="KDb-sY-hGL"/>
                                 </items>
                             </navigationBar>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wbg-L1-iE7">
-                                <rect key="frame" x="67" y="245" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wbg-L1-iE7">
+                                <rect key="frame" x="67" y="209" width="240" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You have no bookmarks." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mh4-ZY-qnL">
-                                        <rect key="frame" x="3" y="39" width="234" height="21"/>
+                                        <rect key="frame" x="3" y="42" width="234" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Try saving a bookmark on an article you want to revisit." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWE-TN-uec">
-                                        <rect key="frame" x="11" y="51" width="219" height="77"/>
+                                        <rect key="frame" x="11" y="62" width="219" height="77"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAT-ud-Pkm">
+                                        <rect key="frame" x="20" y="142" width="200" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Explore Algorithm Helper">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="9TM-VO-MVB"/>
+                                    <constraint firstAttribute="width" constant="240" id="sbj-aI-Ji5"/>
+                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TAT-ud-Pkm">
-                                <rect key="frame" x="87" y="393" width="200" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Explore Algorithm Helper">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="EFW-Lh-C20" firstAttribute="trailing" secondItem="Adh-K3-8Kg" secondAttribute="trailing" id="3Fg-C5-rXF"/>
                             <constraint firstItem="EFW-Lh-C20" firstAttribute="top" secondItem="Adh-K3-8Kg" secondAttribute="top" id="5ST-kT-ve1"/>
                             <constraint firstItem="EFW-Lh-C20" firstAttribute="leading" secondItem="Adh-K3-8Kg" secondAttribute="leading" id="BtC-1I-xkf"/>
+                            <constraint firstItem="Wbg-L1-iE7" firstAttribute="centerY" secondItem="8iL-3P-DAB" secondAttribute="centerY" id="Rx2-XO-Pun"/>
+                            <constraint firstItem="Wbg-L1-iE7" firstAttribute="centerX" secondItem="8iL-3P-DAB" secondAttribute="centerX" id="iMn-z5-CYf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Adh-K3-8Kg"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Bookmarks" image="IconBookmark" id="keM-KI-XO2">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-3"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="buttonGoToExplore" destination="TAT-ud-Pkm" id="gF0-Y8-QjO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Km8-Dj-6Ag" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -116,7 +124,7 @@
         <!--Search-->
         <scene sceneID="tF4-E8-EnG">
             <objects>
-                <viewController id="ejP-rZ-Fav" sceneMemberID="viewController">
+                <viewController id="ejP-rZ-Fav" customClass="SearchViewController" customModule="AlgorithmHelper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LNz-ag-XJt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -182,7 +190,7 @@
         <!--Explore-->
         <scene sceneID="XDq-fZ-AGX">
             <objects>
-                <viewController id="wlx-oo-6Zf" sceneMemberID="viewController">
+                <viewController id="wlx-oo-6Zf" customClass="ExploreViewController" customModule="AlgorithmHelper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z7g-9h-gfL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -215,10 +223,10 @@
             </objects>
             <point key="canvasLocation" x="1196" y="-885.60719640179911"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="Lti-ZM-6yI">
             <objects>
-                <tabBarController id="Rug-si-1xf" sceneMemberID="viewController">
+                <tabBarController id="Rug-si-1xf" customClass="TabBarViewController" customModule="AlgorithmHelper" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="JPo-fx-Yf3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
