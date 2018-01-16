@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Setup UITabBarView to have Avenir 9 font:
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: "Avenir", size: 9)!], for: UIControlState.normal)
+        
+        // Setup Firebase:
+        FirebaseApp.configure()
+        
         
         return true
     }
