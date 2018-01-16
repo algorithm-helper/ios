@@ -24,9 +24,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUT-B4-5Ax">
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUT-B4-5Ax">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textAttributes key="titleTextAttributes">
                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                 </textAttributes>
@@ -36,6 +35,11 @@
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dUT-B4-5Ax" firstAttribute="top" secondItem="eFx-k0-02J" secondAttribute="top" id="TFI-fj-l2f"/>
+                            <constraint firstItem="dUT-B4-5Ax" firstAttribute="leading" secondItem="eFx-k0-02J" secondAttribute="leading" id="jNK-mg-yrJ"/>
+                            <constraint firstItem="dUT-B4-5Ax" firstAttribute="trailing" secondItem="eFx-k0-02J" secondAttribute="trailing" id="tSW-5N-cAx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="eFx-k0-02J"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="IconSettings" id="SuN-LB-Y4a">
@@ -54,9 +58,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFW-Lh-C20">
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFW-Lh-C20">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textAttributes key="titleTextAttributes">
                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                 </textAttributes>
@@ -66,6 +69,11 @@
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EFW-Lh-C20" firstAttribute="trailing" secondItem="Adh-K3-8Kg" secondAttribute="trailing" id="3Fg-C5-rXF"/>
+                            <constraint firstItem="EFW-Lh-C20" firstAttribute="top" secondItem="Adh-K3-8Kg" secondAttribute="top" id="5ST-kT-ve1"/>
+                            <constraint firstItem="EFW-Lh-C20" firstAttribute="leading" secondItem="Adh-K3-8Kg" secondAttribute="leading" id="BtC-1I-xkf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Adh-K3-8Kg"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Bookmarks" image="IconBookmark" id="keM-KI-XO2">
@@ -84,9 +92,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfj-l4-pEQ">
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfj-l4-pEQ">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textAttributes key="titleTextAttributes">
                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                 </textAttributes>
@@ -94,34 +101,45 @@
                                     <navigationItem title="Search" id="H8v-lV-i2M"/>
                                 </items>
                             </navigationBar>
-                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="Search here..." translatesAutoresizingMaskIntoConstraints="NO" id="UNY-du-AM5">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search here..." translatesAutoresizingMaskIntoConstraints="NO" id="UNY-du-AM5">
                                 <rect key="frame" x="0.0" y="64" width="375" height="56"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="scQ-Uq-4dI">
-                                <rect key="frame" x="77" y="255" width="230" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="scQ-Uq-4dI">
+                                <rect key="frame" x="67.5" y="234" width="240" height="150"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Search Algorithm Helper" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5O-eG-Jnb">
-                                        <rect key="frame" x="-3" y="50" width="237" height="29"/>
+                                        <rect key="frame" x="1" y="40" width="237" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Try searching for an article, topic, or category." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8LA-h8-wqg">
+                                        <rect key="frame" x="6" y="87" width="229" height="64"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="O2b-pf-ije"/>
+                                    <constraint firstAttribute="width" constant="240" id="mYT-kg-Uad"/>
+                                </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Try searching for an article, topic, or category." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8LA-h8-wqg">
-                                <rect key="frame" x="78" y="338" width="229" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cfj-l4-pEQ" firstAttribute="leading" secondItem="ftB-tX-clq" secondAttribute="leading" id="1Zm-km-Lbm"/>
+                            <constraint firstItem="scQ-Uq-4dI" firstAttribute="centerY" secondItem="LNz-ag-XJt" secondAttribute="centerY" id="3Qt-RM-d2s"/>
+                            <constraint firstItem="scQ-Uq-4dI" firstAttribute="centerX" secondItem="LNz-ag-XJt" secondAttribute="centerX" id="P6T-ZW-9yX"/>
+                            <constraint firstItem="cfj-l4-pEQ" firstAttribute="top" secondItem="ftB-tX-clq" secondAttribute="top" id="W3Z-bi-bLZ"/>
+                            <constraint firstItem="UNY-du-AM5" firstAttribute="trailing" secondItem="ftB-tX-clq" secondAttribute="trailing" id="fUn-4a-svQ"/>
+                            <constraint firstItem="UNY-du-AM5" firstAttribute="leading" secondItem="ftB-tX-clq" secondAttribute="leading" id="jOr-os-ZXY"/>
+                            <constraint firstItem="cfj-l4-pEQ" firstAttribute="trailing" secondItem="ftB-tX-clq" secondAttribute="trailing" id="m5R-b4-j1g"/>
+                            <constraint firstItem="UNY-du-AM5" firstAttribute="top" secondItem="cfj-l4-pEQ" secondAttribute="bottom" id="vCu-a9-kxj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ftB-tX-clq"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="IconSearch" id="SaY-Ww-Yq3">
@@ -140,9 +158,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wtw-VW-Gae">
+                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wtw-VW-Gae">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textAttributes key="titleTextAttributes">
                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                 </textAttributes>
@@ -152,6 +169,13 @@
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Wtw-VW-Gae" firstAttribute="leading" secondItem="Eex-dS-qYo" secondAttribute="leading" id="Qvb-Pf-VrU"/>
+                            <constraint firstItem="Wtw-VW-Gae" firstAttribute="trailing" secondItem="Eex-dS-qYo" secondAttribute="trailing" id="TmM-rb-DhN"/>
+                            <constraint firstItem="Wtw-VW-Gae" firstAttribute="top" secondItem="Eex-dS-qYo" secondAttribute="top" id="cdL-U0-CIH"/>
+                            <constraint firstItem="Wtw-VW-Gae" firstAttribute="leading" secondItem="Eex-dS-qYo" secondAttribute="leading" id="frx-p1-NxQ"/>
+                            <constraint firstItem="Wtw-VW-Gae" firstAttribute="trailing" secondItem="Eex-dS-qYo" secondAttribute="trailing" id="lf5-Wr-Ch3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Eex-dS-qYo"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Explore" image="IconCompass" id="Scb-nM-e0z">
@@ -160,7 +184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5TY-O0-tj2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1196" y="-885"/>
+            <point key="canvasLocation" x="1196" y="-885.60719640179911"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Lti-ZM-6yI">
