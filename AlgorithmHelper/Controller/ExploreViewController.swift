@@ -9,21 +9,18 @@
 import UIKit
 import Firebase
 
-class ExploreViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class ExploreViewController: UIViewController, UITableViewDataSource {
 
     let FirebaseStorageBucketURL = "gs://algorithm-helper-storage.appspot.com/categories"
     
-    var imageArray = [UIImage(named: "CardsDataStructuresLists"),
-                      UIImage(named: "CardsDataStructuresTrees"),
-                      UIImage(named: "CardsDataStructuresHashing"),
-                      UIImage(named: "CardsAlgorithmsSorting"),
-                      UIImage(named: "CardsAlgorithmsSearching"),
-                      UIImage(named: "CardsAlgorithmsGraphs")]
+    @IBOutlet weak var tableView: UITableView!
+    
+    var categories = ["Action", "Drama", "Science Fiction", "Kids", "Horror"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         print("ExploreView loaded")
-//        initializeTopicViews()
+        
     }
     
     // MARK: - Dynamically create UIImageView objects for each topic from Resources/index.plist
@@ -57,19 +54,27 @@ class ExploreViewController: UIViewController, UICollectionViewDelegate, UIColle
         }
     }
     
-    // MARK: - Setup UICollectionView
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imageArray.count
+    // MARK: - Setup UITableView
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TopicViewCell", for: indexPath) as! TopicViewCell
-        
-        cell.topicImageView.image = imageArray[indexPath.row]
-        cell.topicImageView.layer.cornerRadius = 15
-        cell.topicImageView.clipsToBounds = true
-        
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! CategoryRow
         return cell
     }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return ContentSingleton.instance().getCategoryList().count
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return ContentSingleton.instance().getCategoryList()[section].title
+    }
+    
+    func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.font = UIFont(name: "Avenir-Bold", size: 18)!
+    }
+    
 }
