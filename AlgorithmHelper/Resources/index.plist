@@ -1,0 +1,1197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>category</key>
+		<string>data-structures</string>
+		<key>title</key>
+		<string>Data Structures</string>
+		<key>topics</key>
+		<array>
+			<dict>
+				<key>articles</key>
+				<array>
+					<dict>
+						<key>article</key>
+						<string>introduction</string>
+						<key>description</key>
+						<string>General overview of linear data structures, terminology and concepts that will be covered in this topic.</string>
+						<key>title</key>
+						<string>Introduction</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>linked-list</string>
+						<key>description</key>
+						<string>Learn about the linked list, a recursively defined, sequence of nodes with pointers to the next nodes in the sequence.</string>
+						<key>title</key>
+						<string>Linked List</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>double-ended-linked-list</string>
+						<key>description</key>
+						<string>Learn about the double ended linked list, an augmentation to the linked list where nodes point to the next and previous nodes.</string>
+						<key>title</key>
+						<string>Double Ended Linked List</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>dynamic-array</string>
+						<key>description</key>
+						<string>Learn about the dynamic array, an array-based data structure that allows for the expansion of the size of the array.</string>
+						<key>title</key>
+						<string>Dynamic Array</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>amortization</string>
+						<key>description</key>
+						<string>Learn about amortization, an analysis method for time and space complexity, and its context within data structures and algorithms.</string>
+						<key>title</key>
+						<string>Amortization</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>stack</string>
+						<key>description</key>
+						<string>Learn about the stack, a fundamental last-in-first-out data structure, and its implementations with both a linked list and a dynamic array.</string>
+						<key>title</key>
+						<string>Stack</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>queue</string>
+						<key>description</key>
+						<string>Learn about the queue, a fundamental first-in-first-out data structure, and its implementations with both a linked list and a dynamic array.</string>
+						<key>title</key>
+						<string>Queue</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>double-ended-queue</string>
+						<key>description</key>
+						<string>Learn about the double ended queue, an abstract data structure that supports adding and removing elements from the front and back.</string>
+						<key>title</key>
+						<string>Double Ended Queue</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>iterator-iterable</string>
+						<key>description</key>
+						<string>Learn about the iterator / iterable, an abstract data structure used for traversing a list structure.</string>
+						<key>title</key>
+						<string>Iterator / Iterable</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>time-and-space-complexity</string>
+						<key>description</key>
+						<string>Learn about the time and space complexity of fundamental operations between the data structures listed in this topic.</string>
+						<key>title</key>
+						<string>Time and Space Complexity</string>
+					</dict>
+				</array>
+				<key>image</key>
+				<string>CardsDataStructuresLists.png</string>
+				<key>title</key>
+				<string>Lists</string>
+				<key>topic</key>
+				<string>lists</string>
+			</dict>
+			<dict>
+				<key>articles</key>
+				<array>
+					<dict>
+						<key>article</key>
+						<string>introduction</string>
+						<key>description</key>
+						<string>General overview of tree data structures, terminology and concepts that will be covered in this topic.</string>
+						<key>title</key>
+						<string>Introduction</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>map-symbol-table</string>
+						<key>description</key>
+						<string>Learn about the map / symbol table, an abstract data structure for maintaining a collection of (key, value) pairs.</string>
+						<key>title</key>
+						<string>Map / Symbol Table</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>set</string>
+						<key>description</key>
+						<string>Learn about the set, an abstract data structure for maintaining a collection of unique key elements.</string>
+						<key>title</key>
+						<string>Set</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>binary-search-tree</string>
+						<key>description</key>
+						<string>Learn about the binary search tree, a tree data structure that uses binary search for the efficient retrieval of elements.</string>
+						<key>title</key>
+						<string>Binary Search Tree</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>balanced-binary-search-tree</string>
+						<key>description</key>
+						<string>Learn about the balanced binary search tree, a tree data structure that guarantees logarithmic performance by keeping balanced.</string>
+						<key>title</key>
+						<string>Balanced Binary Search Tree</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>2-3-tree</string>
+						<key>description</key>
+						<string>Learn about the 2-3 tree, a tree data structure that keeps balance through the mechanism of 2-Nodes and 3-Nodes.</string>
+						<key>title</key>
+						<string>2-3 Tree</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>red-black-tree</string>
+						<key>description</key>
+						<string>Learn about the red-black tree, a tree data structure derived from the 2-3 tree, that keeps balance using red and black colored nodes.</string>
+						<key>title</key>
+						<string>Red-Black Tree</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>avl-tree</string>
+						<key>description</key>
+						<string>Learn about the AVL tree, a tree data structure that keeps balance through maintaining balance between the heights of subtrees.</string>
+						<key>title</key>
+						<string>AVL Tree</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>heap</string>
+						<key>description</key>
+						<string>Learn about the heap, a tree data structure that represents the tree in a single array, and implementations for binary min/max heaps.</string>
+						<key>title</key>
+						<string>Heap</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>priority-queue</string>
+						<key>description</key>
+						<string>Learn about the priority queue, a data structure that uses the heap data structure to allow for efficient retrieval of min/max elements.</string>
+						<key>title</key>
+						<string>Priority Queue</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>union-find-disjoint-set</string>
+						<key>description</key>
+						<string>Learn about the union find / disjoint set, a data structure used to represent connected components in the problem of dynamic connectivity.</string>
+						<key>title</key>
+						<string>Union Find / Disjoint Set</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>time-and-space-complexity</string>
+						<key>description</key>
+						<string>Learn about the time and space complexity of fundamental operations between the data structures listed in this topic.</string>
+						<key>title</key>
+						<string>Time and Space Complexity</string>
+					</dict>
+				</array>
+				<key>image</key>
+				<string>CardsDataStructuresTrees.png</string>
+				<key>title</key>
+				<string>Trees</string>
+				<key>topic</key>
+				<string>trees</string>
+			</dict>
+			<dict>
+				<key>articles</key>
+				<array>
+					<dict>
+						<key>article</key>
+						<string>introduction</string>
+						<key>description</key>
+						<string>General overview of data structures that use hashing, terminology and concepts that will be covered in this topic.</string>
+						<key>title</key>
+						<string>Introduction</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>hash-function</string>
+						<key>description</key>
+						<string>Learn about the hash function, a function that enables mapping data of an arbitrary size to data of fixed size.</string>
+						<key>title</key>
+						<string>Hash Function</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>collision-resolution</string>
+						<key>description</key>
+						<string>Learn about collision resolution, the techniques used when dealing with situations where more than one element hash to the same place.</string>
+						<key>title</key>
+						<string>Collision Resolution</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>simple-uniform-hashing-assumption</string>
+						<key>description</key>
+						<string>Learn about the Simple Uniform Hashing Assumption, the basic mathematical assumption that enables the analysis of hash maps.</string>
+						<key>title</key>
+						<string>Simple Uniform Hashing Assumption</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>hash-map</string>
+						<key>description</key>
+						<string>Learn about the hash map, and its implementations with separate chaining and linear probing, that allows for constant time for all operations.</string>
+						<key>title</key>
+						<string>Hash Map</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>hash-set</string>
+						<key>description</key>
+						<string>Learn about the hash set, and its use to represent the abstract data structure of a set, but using hashing to allow for constant time for all operations.</string>
+						<key>title</key>
+						<string>Hash Set</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>time-and-space-complexity</string>
+						<key>description</key>
+						<string>Learn about the time and space complexity of fundamental operations between the data structures listed in this topic.</string>
+						<key>title</key>
+						<string>Time and Space Complexity</string>
+					</dict>
+				</array>
+				<key>image</key>
+				<string>CardsDataStructuresHashing.png</string>
+				<key>title</key>
+				<string>Hashing</string>
+				<key>topic</key>
+				<string>hashing</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>category</key>
+		<string>algorithms</string>
+		<key>title</key>
+		<string>Algorithms</string>
+		<key>topics</key>
+		<array>
+			<dict>
+				<key>articles</key>
+				<array>
+					<dict>
+						<key>article</key>
+						<string>introduction</string>
+						<key>description</key>
+						<string>General overview of the fundamental problem of searching, terminology and concepts that will be covered in this topic.</string>
+						<key>title</key>
+						<string>Introduction</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>binary-search</string>
+						<key>description</key>
+						<string>Learn about binary search, a searching algorithm for retrieving elements in a sorted array in logarithmic time.</string>
+						<key>title</key>
+						<string>Binary Search</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>ternary-search</string>
+						<key>description</key>
+						<string>Learn about ternary search, a searching algorithm for finding the min/max element of a unimodal function.</string>
+						<key>title</key>
+						<string>Ternary Search</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>jump-search</string>
+						<key>description</key>
+						<string>Learn about jump search, a searching algorithm for retrieving elements in a sorted array by taking steps of size sqrt(N).</string>
+						<key>title</key>
+						<string>Jump Search</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>interpolation-search</string>
+						<key>description</key>
+						<string>Learn about interpolation search, a searching algorithm for retrieving elements in a sorted array with elements uniformly distributed.</string>
+						<key>title</key>
+						<string>Interpolation Search</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>time-and-space-complexity</string>
+						<key>description</key>
+						<string>Learn about the time and space complexity of fundamental operations between the algorithms listed in this topic.</string>
+						<key>title</key>
+						<string>Time and Space Complexity</string>
+					</dict>
+				</array>
+				<key>image</key>
+				<string>CardsAlgorithmsSearching.png</string>
+				<key>title</key>
+				<string>Searching</string>
+				<key>topic</key>
+				<string>searching</string>
+			</dict>
+			<dict>
+				<key>articles</key>
+				<array>
+					<dict>
+						<key>article</key>
+						<string>introduction</string>
+						<key>description</key>
+						<string>General overview of algorithms for sorting elements in arrays, terminology and concepts that will be covered in this topic.</string>
+						<key>title</key>
+						<string>Introduction</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>stability</string>
+						<key>description</key>
+						<string>Learn about stability, which refers to the property of sorting algorithms to be able to keep identical elements in the same final order.</string>
+						<key>title</key>
+						<string>Stability</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>in-place</string>
+						<key>description</key>
+						<string>Learn about in-place, where refers to the property of sorting algorithms to be able to be performed without the use of auxiliary space.</string>
+						<key>title</key>
+						<string>In-Place</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>selection-sort</string>
+						<key>description</key>
+						<string>Learn about selection sort, a sorting algorithm that works by iterating through the array, selecting the minimum element each time.</string>
+						<key>title</key>
+						<string>Selection Sort</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>insertion-sort</string>
+						<key>description</key>
+						<string>Learn about insertion sort, a sorting algorithm that works by inserting the next element into the current sorted array.</string>
+						<key>title</key>
+						<string>Insertion Sort</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>shell-sort</string>
+						<key>description</key>
+						<string>Learn about shell sort, a sorting algorithm that uses h-sorting, and takes advantage of insertion sort's efficiency with nearly sorted arrays.</string>
+						<key>title</key>
+						<string>Shell Sort</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>divide-and-conquer</string>
+						<key>description</key>
+						<string>Learn about divide and conquer, an algorithm design paradigm that recursively breaks down a larger problem into easier, smaller, subproblems.</string>
+						<key>title</key>
+						<string>Divide and Conquer</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>merge-sort</string>
+						<key>description</key>
+						<string>Learn about merge sort, an efficient sorting algorithm that works by recursively breaking down subarrays and merging sorted subarrays.</string>
+						<key>title</key>
+						<string>Merge Sort</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>quick-sort</string>
+						<key>description</key>
+						<string>Learn about quick sort, an efficient sorting algorithm that works by using a pivot and recurively sorting elements to the left and right of the pivot.</string>
+						<key>title</key>
+						<string>Quick Sort</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>heap-sort</string>
+						<key>description</key>
+						<string>Learn about heap sort, an efficient sorting algorithm that works by building a binary min heap out of the elements, and swapping the min element with the last element.</string>
+						<key>title</key>
+						<string>Heap Sort</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>bucket-sort</string>
+						<key>description</key>
+						<string>Learn about bucket sort, a sorting algorithm that runs in linear time in the context of sorting integer elements, by moving them to array indices that match the element.</string>
+						<key>title</key>
+						<string>Bucket Sort</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>radix-sort</string>
+						<key>description</key>
+						<string>Learn about radix sort, a sorting algorithm that is used to sort integer elements through the use of looking at the least to most significant digits of the elements.</string>
+						<key>title</key>
+						<string>Radix Sort</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>comparator-comparable</string>
+						<key>description</key>
+						<string>Learn about the comparator / comparable, an abstract data structure that enables the comparison of two objects to create more generic sorting algorithms.</string>
+						<key>title</key>
+						<string>Comparator / Comparable</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>time-and-space-complexity</string>
+						<key>description</key>
+						<string>Learn about the time and space complexity of fundamental operations between the algorithms listed in this topic.</string>
+						<key>title</key>
+						<string>Time and Space Complexity</string>
+					</dict>
+				</array>
+				<key>image</key>
+				<string>CardsAlgorithmsSorting.png</string>
+				<key>title</key>
+				<string>Sorting</string>
+				<key>topic</key>
+				<string>sorting</string>
+			</dict>
+			<dict>
+				<key>articles</key>
+				<array>
+					<dict>
+						<key>article</key>
+						<string>introduction</string>
+						<key>description</key>
+						<string>General overview of algorithms for the fundamental problem of shuffling, terminology and concepts that will be covered in this topic.</string>
+						<key>title</key>
+						<string>Introduction</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>fisher-yates-shuffle</string>
+						<key>description</key>
+						<string>Learn about the Fisher-Yates Shuffle, a shuffling algorithm used to uniformly randomly distribute elements within an array.</string>
+						<key>title</key>
+						<string>Fisher-Yates Shuffle</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>sattolos-algorithm</string>
+						<key>description</key>
+						<string>Learn about Sattolo's Algorithm, a shuffling algorithm with the property that elements cannot be shuffled to their initial position.</string>
+						<key>title</key>
+						<string>Sattolo's Algorithm</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>time-and-space-complexity</string>
+						<key>description</key>
+						<string>Learn about the time and space complexity of fundamental operations between the algorithms listed in this topic.</string>
+						<key>title</key>
+						<string>Time and Space Complexity</string>
+					</dict>
+				</array>
+				<key>image</key>
+				<string>CardsAlgorithmsShuffling.png</string>
+				<key>title</key>
+				<string>Shuffling</string>
+				<key>topic</key>
+				<string>shuffling</string>
+			</dict>
+			<dict>
+				<key>articles</key>
+				<array>
+					<dict>
+						<key>article</key>
+						<string>introduction</string>
+						<key>description</key>
+						<string>General overview of the algorithms used in the context of graph theory, terminology and concepts that will be covered in this topic.</string>
+						<key>title</key>
+						<string>Introduction</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>undirected-and-directed-graphs</string>
+						<key>description</key>
+						<string>Learn about undirected and directed graphs, two types of graphs that greatly dictate the limitations of certain algorithms used on them.</string>
+						<key>title</key>
+						<string>Undirected and Directed Graphs</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>sparse-and-dense-graphs</string>
+						<key>description</key>
+						<string>Learn about sparse and dense graphs, two types of graphs that refer to the property of the number of vertex and edges within the graph.</string>
+						<key>title</key>
+						<string>Sparse and Dense Graphs</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>graph-representation</string>
+						<key>description</key>
+						<string>Learn about graph representation, and the three main implementations using edge lists, vertex matrices, and adjacency lists.</string>
+						<key>title</key>
+						<string>Graph Representation</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>path-finding</string>
+						<key>description</key>
+						<string>Learn about path finding, the fundamental problem within graphs of being able to find a sequence of edges that go from a starting vertex to ending vertex.</string>
+						<key>title</key>
+						<string>Path Finding</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>depth-first-search</string>
+						<key>description</key>
+						<string>Learn about depth first search, a basic graph traversal algorithm with the property of always choosing adjacent vertices to be the next to be traversed.</string>
+						<key>title</key>
+						<string>Depth First Search</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>breadth-first-search</string>
+						<key>description</key>
+						<string>Learn about breadth first search, a basic graph traversal algorithm with the property of always at the same level to be the next to be traversed.</string>
+						<key>title</key>
+						<string>Breadth First Search</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>connected-components</string>
+						<key>description</key>
+						<string>Learn about connected components, and using the depth first search algorithm to determine if two vertices belong to the same component.</string>
+						<key>title</key>
+						<string>Connected Components</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>topological-sort</string>
+						<key>description</key>
+						<string>Learn about topological sort, an algorithm for the linear ordering of vertices in a graph such that for all edges (u, v), u comes before v.</string>
+						<key>title</key>
+						<string>Topological Sort</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>kahns-topological-sort-algorithm</string>
+						<key>description</key>
+						<string>Learn about Kahn's Topological Sort Algorithm, an algorithm for the topological ordering of a directed graph, by using depth first search.</string>
+						<key>title</key>
+						<string>Kahn's Topological Sort Algorithm</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>strongly-connected-components</string>
+						<key>description</key>
+						<string>Learn about strongly connected components, a property such that there exists a path from any vertex to every other vertex in a subgraph.</string>
+						<key>title</key>
+						<string>Strongly Connected Components</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>kosarajus-algorithm</string>
+						<key>description</key>
+						<string>Learn about Kosaraju's Algorithm, an algorithm used for determining strongly connected components, by topological sorting and then using depth first search.</string>
+						<key>title</key>
+						<string>Kosaraju's Algorithm</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>weighted-graph</string>
+						<key>description</key>
+						<string>Learn about weighted graphs, which are graphs such that the edges are given a numerical weight, which may represent length, cost, or capacity.</string>
+						<key>title</key>
+						<string>Weighted Graph</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>shortest-path-finding</string>
+						<key>description</key>
+						<string>Learn about shorted path finding, which is a fundamental problem in graph theory of being able to find the path from one vertex to another with the least combined weight.</string>
+						<key>title</key>
+						<string>Shortest Path Finding</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>edge-relaxation</string>
+						<key>description</key>
+						<string>Learn about edge relaxation, which is a common operation used in shortest path finding algorithms, that is used to lower the cost of reaching a vertex by using another vertex.</string>
+						<key>title</key>
+						<string>Edge Relaxation</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>dijkstras-algorithm</string>
+						<key>description</key>
+						<string>Learn about Dijkstra's Algorithm, a shortest path finding algorithm that is efficient for finding shortest paths in a graph with non-negative edge weights.</string>
+						<key>title</key>
+						<string>Dijkstra's Algorithm</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>bellman-ford-algorithm</string>
+						<key>description</key>
+						<string>Learn about the Bellman-Ford Algorithm, a shortest path finding algorithm that is used for finding shortest paths with potentially negative edge weights.</string>
+						<key>title</key>
+						<string>Bellman-Ford Algorithm</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>floyd-warshall-algorithm</string>
+						<key>description</key>
+						<string>Learn about the Floyd-Warshall Algorithm, a shortest path finding algorithm that is used for finding shortest paths with negative edge weights by using dynamic programming.</string>
+						<key>title</key>
+						<string>Floyd-Warshall Algorithm</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>greedy-algorithm</string>
+						<key>description</key>
+						<string>Learn about greedy algorithms, a class of algorithms with the property of always choosing the locally optimal choice with the goal of achieving a globally optimal solution.</string>
+						<key>title</key>
+						<string>Greedy Algorithm</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>minimum-spanning-tree</string>
+						<key>description</key>
+						<string>Learn about minimum spanning trees, which are a set of edges of a graph such that they connect all of the vertices with no cycles between them.</string>
+						<key>title</key>
+						<string>Minimum Spanning Tree</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>prims-algorithm</string>
+						<key>description</key>
+						<string>Learn about Prim's Algorithm, an algorithm for finding the minimum spanning tree by always choosing the next least weight edge from the current minimum spanning tree.</string>
+						<key>title</key>
+						<string>Prim's Algorithm</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>kruskals-algorithm</string>
+						<key>description</key>
+						<string>Learn about Kruskal's Algorithm, an algorithm for finding the minimum spanning tree by always choosing the next least weight edge overall such that no cycles are formed.</string>
+						<key>title</key>
+						<string>Kruskal's Algorithm</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>flow-network</string>
+						<key>description</key>
+						<string>Learn about flow networks, a type of graph such that all edges have capacities, and recieve flows, and the flow cannot exceed the capacity.</string>
+						<key>title</key>
+						<string>Flow Network</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>max-flow-min-cut</string>
+						<key>description</key>
+						<string>Learn about max flow min cut, a concept in network flow that states the max flow from the source to sink is equal to the total weight fo the edges in the min cut.</string>
+						<key>title</key>
+						<string>Max Flow Min Cut</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>ford-fulkerson-algorithm</string>
+						<key>description</key>
+						<string>Learn about the Ford-Fulkerson Algorithm, an algorithm for finding the max flow within a flow network by greedily augmenting paths.</string>
+						<key>title</key>
+						<string>Ford-Fulkerson Algorithm</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>time-and-space-complexity</string>
+						<key>description</key>
+						<string>Learn about the time and space complexity of fundamental operations between the algorithms listed in this topic.</string>
+						<key>title</key>
+						<string>Time and Space Complexity</string>
+					</dict>
+				</array>
+				<key>image</key>
+				<string>CardsAlgorithmsGraphs.png</string>
+				<key>title</key>
+				<string>Graphs</string>
+				<key>topic</key>
+				<string>graphs</string>
+			</dict>
+			<dict>
+				<key>articles</key>
+				<array>
+					<dict>
+						<key>article</key>
+						<string>introduction</string>
+						<key>description</key>
+						<string>General overview of the various mathematical algorithms, terminology and concepts that will be covered in this topic.</string>
+						<key>title</key>
+						<string>Introduction</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>euclids-algorithm</string>
+						<key>description</key>
+						<string>Learn about Euclid's algorithm, an efficient algorithm for computing the greatest common divisor (GCD) between two numbers.</string>
+						<key>title</key>
+						<string>Euclid's Algorithm</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>multiplication-algorithm</string>
+						<key>description</key>
+						<string>Learn about multiplication algorithms, which are algorithms used to multiply two numbers faster than standard multiplication.</string>
+						<key>title</key>
+						<string>Multiplication Algorithm</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>karatsuba-algorithm</string>
+						<key>description</key>
+						<string>Learn about the Karatsuba algorithm, a multiplication algorithm that runs in faster than quadratic time.</string>
+						<key>title</key>
+						<string>Karatsuba Algorithm</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>newton-raphson-method</string>
+						<key>description</key>
+						<string>Learn about the Newton-Raphson method, which is a method used for finding better approximations to the roots of a function.</string>
+						<key>title</key>
+						<string>Newton-Raphson Method</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>modular-exponentiation</string>
+						<key>description</key>
+						<string>Learn about modular exponentiation, an efficient method of exponentiation over a modulus.</string>
+						<key>title</key>
+						<string>Modular Exponentiation</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>convex-hull</string>
+						<key>description</key>
+						<string>Learn about the convex hull, which is the smallest convex set that contains a set of points, and algorithms to find it.</string>
+						<key>title</key>
+						<string>Convex Hull</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>graham-scan</string>
+						<key>description</key>
+						<string>Learn about the Graham scan, an efficient method for computing the convex hull of a set of points in linearithmic time.</string>
+						<key>title</key>
+						<string>Graham Scan</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>time-and-space-complexity</string>
+						<key>description</key>
+						<string>Learn about the time and space complexity of the mathematical algorithms listed in this topic.</string>
+						<key>title</key>
+						<string>Time and Space Complexity</string>
+					</dict>
+				</array>
+				<key>image</key>
+				<string>CardsAlgorithmsMathematics.png</string>
+				<key>title</key>
+				<string>Mathematics</string>
+				<key>topic</key>
+				<string>mathematics</string>
+			</dict>
+			<dict>
+				<key>articles</key>
+				<array>
+					<dict>
+						<key>article</key>
+						<string>introduction</string>
+						<key>description</key>
+						<string>General overview of the string algorithms, data structures, terminology and concepts that will be covered in this topic.</string>
+						<key>title</key>
+						<string>Introduction</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>string-sorting</string>
+						<key>description</key>
+						<string>Learn about the problem of string sorting, and how we can use non-comparison sorts to achieve more efficient results.</string>
+						<key>title</key>
+						<string>String Sorting</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>lsd-string-sort</string>
+						<key>description</key>
+						<string>Learn about least-significant-digit (LSD) string sort, a sorting algorithm specific to strings that runs in faster than linearithmic time.</string>
+						<key>title</key>
+						<string>LSD String Sort</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>msd-string-sort</string>
+						<key>description</key>
+						<string>Learn about most-significant-digit (MSD) string sort, a sorting algorithm specific to strings that runs in faster than linearithmic time.</string>
+						<key>title</key>
+						<string>MSD String Sort</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>trie</string>
+						<key>description</key>
+						<string>Learn about the trie, a data structure for maps that uses string keys, and values stored in the suffixes.</string>
+						<key>title</key>
+						<string>Trie</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>r-way-trie</string>
+						<key>description</key>
+						<string>Learn about the R-way trie, a trie structure where each node has R (radix) amount of children nodes.</string>
+						<key>title</key>
+						<string>R-Way Trie</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>ternary-search-trie</string>
+						<key>description</key>
+						<string>Learn about the ternary search trie, a trie structure where each node has three children to store smaller, equal, and larger key nodes.</string>
+						<key>title</key>
+						<string>Ternary Search Trie</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>string-matching</string>
+						<key>description</key>
+						<string>Learn about string matching, which is the problem of finding a smaller length pattern string in a larger body of text.</string>
+						<key>title</key>
+						<string>String Matching</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>knuth-morris-pratt-algorithm</string>
+						<key>description</key>
+						<string>Learn about the Knuth-Morris-Pratt algorithm, a string matching algorithm that re-examines the word in a mismatch to be more efficient.</string>
+						<key>title</key>
+						<string>Knuth-Morris-Pratt Algorithm</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>boyer-moore-algorithm</string>
+						<key>description</key>
+						<string>Learn about the Boyer-Moore algorithm, a string matching algorithm that uses text preprocessing for more efficient search results.</string>
+						<key>title</key>
+						<string>Boyer-Moore Algorithm</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>rabin-karp-algorithm</string>
+						<key>description</key>
+						<string>Learn about the Rabin-Karp algorithm, a string matching algorithm that uses hashing to find a set of patterns in a text.</string>
+						<key>title</key>
+						<string>Rabin-Karp Algorithm</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>time-and-space-complexity</string>
+						<key>description</key>
+						<string>Learn about the time and space complexity of string algorithms and data structures listed in this topic.</string>
+						<key>title</key>
+						<string>Time and Space Complexity</string>
+					</dict>
+				</array>
+				<key>image</key>
+				<string>CardsAlgorithmsStrings.png</string>
+				<key>title</key>
+				<string>Strings</string>
+				<key>topic</key>
+				<string>strings</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>category</key>
+		<string>software-engineering</string>
+		<key>title</key>
+		<string>Software Engineering</string>
+		<key>topics</key>
+		<array>
+			<dict>
+				<key>articles</key>
+				<array>
+					<dict>
+						<key>article</key>
+						<string>introduction</string>
+						<key>description</key>
+						<string>General overview of the motivations behind object oriented programming, terminology and concepts that will be covered in this topic.</string>
+						<key>title</key>
+						<string>Introduction</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>class-and-instance</string>
+						<key>description</key>
+						<string>Learn about classes and instances, which are are structures for a template of creating objects, and concrete occurences of that object.</string>
+						<key>title</key>
+						<string>Class and Instance</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>inheritance</string>
+						<key>description</key>
+						<string>Learn about inheritance, which is when an object of a particular class is able to acquire all of the properties, methods and functions of its parent class.</string>
+						<key>title</key>
+						<string>Inheritance</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>encapsulation</string>
+						<key>description</key>
+						<string>Learn about encapsulation, which is a property of Objects to be able to restrict access to its internal fields, methods and functions.</string>
+						<key>title</key>
+						<string>Encapsulation</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>polymorphism</string>
+						<key>description</key>
+						<string>Learn about polymorphism, which is the mechanism of being able to use some abstract interface to apply to multiple classes that implement that interface.</string>
+						<key>title</key>
+						<string>Polymorphism</string>
+					</dict>
+				</array>
+				<key>image</key>
+				<string>CardsSoftwareEngineeringObjectOrientedProgramming.png</string>
+				<key>title</key>
+				<string>Object Oriented Programming</string>
+				<key>topic</key>
+				<string>object-oriented-programming</string>
+			</dict>
+			<dict>
+				<key>articles</key>
+				<array>
+					<dict>
+						<key>article</key>
+						<string>introduction</string>
+						<key>description</key>
+						<string>General overview of the motivations behind functional programming, terminology and concepts that will be covered in this topic.</string>
+						<key>title</key>
+						<string>Introduction</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>first-class-function</string>
+						<key>description</key>
+						<string>Learn about the first class function, which is a property of functional programming languages where functions can be passed as arguments to other functions.</string>
+						<key>title</key>
+						<string>First Class Function</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>recursion</string>
+						<key>description</key>
+						<string>Learn about recursion, a programming method and general mechanism in functional programming, where solutions to problems depend on smaller subproblems.</string>
+						<key>title</key>
+						<string>Recursion</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>lambda-notation</string>
+						<key>description</key>
+						<string>Learn about lambda notation, a system in mathematical logic for expressing computation based on function abstraction and application using variable binding and substitution.</string>
+						<key>title</key>
+						<string>Lambda Notation</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>function-composition</string>
+						<key>description</key>
+						<string>Learn about function composition, a technique in functional programming for applying functions to the result of another function to produce a third function.</string>
+						<key>title</key>
+						<string>Function Composition</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>map-filter-reduce</string>
+						<key>description</key>
+						<string>Learn about map, filter, and reduce, which are fundamental functions that operate on lists of elements, and are used to augment, remove, and combine elements.</string>
+						<key>title</key>
+						<string>Map, Filter, Reduce</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>currying</string>
+						<key>description</key>
+						<string>Learn about currying, a technique in functional programming to translate the evaluation of a function with multiple arguments into a evaluating a sequence of functions.</string>
+						<key>title</key>
+						<string>Currying</string>
+					</dict>
+				</array>
+				<key>image</key>
+				<string>CardsSoftwareEngineeringFunctionalProgramming.png</string>
+				<key>title</key>
+				<string>Functional Programming</string>
+				<key>topic</key>
+				<string>functional-programming</string>
+			</dict>
+			<dict>
+				<key>articles</key>
+				<array>
+					<dict>
+						<key>article</key>
+						<string>introduction</string>
+						<key>description</key>
+						<string>General overview of the motivations behind using design patterns, terminology and concepts that will be covered in this topic.</string>
+						<key>title</key>
+						<string>Introduction</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>adapter</string>
+						<key>description</key>
+						<string>Learn about the adapter pattern, which is used for converting incompatible interfaces.</string>
+						<key>title</key>
+						<string>Adapter</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>bridge</string>
+						<key>description</key>
+						<string>Learn about the bridge pattern, which is used for decoupling abstractions from their implementations.</string>
+						<key>title</key>
+						<string>Bridge</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>builder</string>
+						<key>description</key>
+						<string>Learn about the builder pattern, which is used for constructing and parsing complex objects.</string>
+						<key>title</key>
+						<string>Builder</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>chain-of-responsibility</string>
+						<key>description</key>
+						<string>Learn about the chain of responsibility pattern, which is using more than one object to handle a request.</string>
+						<key>title</key>
+						<string>Chain of Responsibility</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>command</string>
+						<key>description</key>
+						<string>Learn about the command pattern, which is used to encapsulate and parameterize a request object.</string>
+						<key>title</key>
+						<string>Command</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>composite</string>
+						<key>description</key>
+						<string>Learn about the composite pattern, which is used to represent objects in a recursive tree structure.</string>
+						<key>title</key>
+						<string>Composite</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>decorator</string>
+						<key>description</key>
+						<string>Learn about the decorator pattern, which is used to attach functionality to an object dynamically.</string>
+						<key>title</key>
+						<string>Decorator</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>factory</string>
+						<key>description</key>
+						<string>Learn about the factory pattern, which is used to create objects of different parameters.</string>
+						<key>title</key>
+						<string>Factory</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>iterator</string>
+						<key>description</key>
+						<string>Learn about the iterator pattern, which is used to traverse through a collection of objects without breaking encapsulation.</string>
+						<key>title</key>
+						<string>Iterator</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>null-object</string>
+						<key>description</key>
+						<string>Learn about the null object pattern, which is used to encapsulate the absence of an object.</string>
+						<key>title</key>
+						<string>Null Object</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>observer</string>
+						<key>description</key>
+						<string>Learn about the observer pattern, which is used for objects to automatically update its dependents.</string>
+						<key>title</key>
+						<string>Observer</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>prototype</string>
+						<key>description</key>
+						<string>Learn about the prototype pattern, which is used to instantiate objects with specific parameters.</string>
+						<key>title</key>
+						<string>Prototype</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>singleton</string>
+						<key>description</key>
+						<string>Learn about the singleton pattern, which is used to instantiate an object of only one instance.</string>
+						<key>title</key>
+						<string>Singleton</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>strategy</string>
+						<key>description</key>
+						<string>Learn about the strategy pattern, which is used to encapsulate a family of algorithms.</string>
+						<key>title</key>
+						<string>Strategy</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>template-method</string>
+						<key>description</key>
+						<string>Learn about the template method pattern, which is used to provide a skeleton for a particular class.</string>
+						<key>title</key>
+						<string>Template Method</string>
+					</dict>
+					<dict>
+						<key>article</key>
+						<string>visitor</string>
+						<key>description</key>
+						<string>Learn about the visitor pattern, which is used to perform dynamic dispatch on multiple polymorphic objects.</string>
+						<key>title</key>
+						<string>Visitor</string>
+					</dict>
+				</array>
+				<key>description</key>
+				<string>Learn about software design patterns for solving common problems like factories, builders, and observers.</string>
+				<key>title</key>
+				<string>Design Patterns</string>
+				<key>topic</key>
+				<string>design-patterns</string>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>
