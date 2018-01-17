@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class ExploreViewController: UIViewController, UITableViewDataSource {
+class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     let FirebaseStorageBucketURL = "gs://algorithm-helper-storage.appspot.com/categories"
     
@@ -21,6 +21,8 @@ class ExploreViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         print("ExploreView loaded")
         
+        tableView.delegate = self
+        tableView.dataSource = self
     }
     
     // MARK: - Dynamically create UIImageView objects for each topic from Resources/index.plist
@@ -55,12 +57,16 @@ class ExploreViewController: UIViewController, UITableViewDataSource {
     }
     
     // MARK: - Setup UITableView
+    var cellRowIndex = 0
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! CategoryRow
+        cell.index = cellRowIndex
+        cellRowIndex += 1
         return cell
     }
     
@@ -68,13 +74,22 @@ class ExploreViewController: UIViewController, UITableViewDataSource {
         return ContentSingleton.instance().getCategoryList().count
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return ContentSingleton.instance().getCategoryList()[section].title
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor.white
+        
+        let headerLabel = UILabel(frame: CGRect(x: 10, y: 10, width:
+            tableView.bounds.size.width, height: tableView.bounds.size.height))
+        headerLabel.font = UIFont(name: "Avenir-Bold", size: 18)
+        headerLabel.textColor = UIColor.black
+        headerLabel.text = ContentSingleton.instance().getCategoryList()[section].title
+        headerLabel.sizeToFit()
+        headerView.addSubview(headerLabel)
+        return headerView
     }
     
-    func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        let header = view as! UITableViewHeaderFooterView
-        header.textLabel?.font = UIFont(name: "Avenir-Bold", size: 18)!
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
     }
     
 }

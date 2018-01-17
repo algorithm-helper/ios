@@ -205,35 +205,53 @@
                                     <navigationItem title="Explore" id="xGU-Rf-pPi"/>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="40" sectionFooterHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="uYr-4S-nWo">
-                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="40" sectionFooterHeight="40" translatesAutoresizingMaskIntoConstraints="NO" id="uYr-4S-nWo">
+                                <rect key="frame" x="0.0" y="73" width="414" height="614"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="150" id="SLb-HS-piF" customClass="CategoryRow" customModule="AlgorithmHelper" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="SLb-HS-piF" customClass="CategoryRow" customModule="AlgorithmHelper" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="40" width="414" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SLb-HS-piF" id="D6o-fc-Une">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="149.66666666666666"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BCp-ov-zgg">
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BCp-ov-zgg">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="QzW-sU-XNC">
-                                                        <size key="itemSize" width="50" height="50"/>
+                                                        <size key="itemSize" width="146" height="137"/>
                                                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                         <inset key="sectionInset" minX="5" minY="5" maxX="5" maxY="5"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="topicCell" id="u3O-iP-T0R">
-                                                            <rect key="frame" x="5" y="5" width="50" height="50"/>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="topicCell" id="u3O-iP-T0R" customClass="TopicCollectionViewCell" customModule="AlgorithmHelper" customModuleProvider="target">
+                                                            <rect key="frame" x="5" y="6.666666666666667" width="150" height="137"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="150" height="137"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gkm-E3-KZQ">
+                                                                        <rect key="frame" x="0.0" y="2" width="150" height="95"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lL3-kC-TUL">
+                                                                        <rect key="frame" x="20" y="100" width="130" height="44"/>
+                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
                                                             </view>
-                                                            <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            <size key="customSize" width="50" height="50"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <size key="customSize" width="150" height="137"/>
+                                                            <connections>
+                                                                <outlet property="topicImageView" destination="Gkm-E3-KZQ" id="4W3-8v-i1m"/>
+                                                                <outlet property="topicLabel" destination="lL3-kC-TUL" id="YEh-sw-Pbz"/>
+                                                            </connections>
                                                         </collectionViewCell>
                                                     </cells>
                                                     <connections>
@@ -258,7 +276,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="uYr-4S-nWo" firstAttribute="top" secondItem="Wtw-VW-Gae" secondAttribute="bottom" id="9Bo-9c-TUM"/>
+                            <constraint firstItem="uYr-4S-nWo" firstAttribute="top" secondItem="Wtw-VW-Gae" secondAttribute="bottom" constant="9" id="9Bo-9c-TUM"/>
                             <constraint firstItem="uYr-4S-nWo" firstAttribute="bottom" secondItem="Eex-dS-qYo" secondAttribute="bottom" id="CzC-n5-JKZ"/>
                             <constraint firstItem="uYr-4S-nWo" firstAttribute="trailing" secondItem="Eex-dS-qYo" secondAttribute="trailing" id="E02-hY-JON"/>
                             <constraint firstItem="Wtw-VW-Gae" firstAttribute="leading" secondItem="Eex-dS-qYo" secondAttribute="leading" id="Qvb-Pf-VrU"/>
