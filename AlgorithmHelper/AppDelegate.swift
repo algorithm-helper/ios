@@ -20,9 +20,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Setup UITabBarView to have Avenir 9 font:
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: "Avenir", size: 9)!], for: UIControlState.normal)
         
+        // Setup ContentSingleton:
+        ContentSingleton.instance().initializeData()
+        
         // Setup Firebase:
         FirebaseApp.configure()
-        
+    
         return true
     }
 

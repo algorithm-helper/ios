@@ -389,7 +389,7 @@
 						<key>article</key>
 						<string>shell-sort</string>
 						<key>description</key>
-						<string>Learn about shell sort, a sorting algorithm that uses h-sorting, and takes advantage of insertion sort's efficiency with nearly sorted arrays.</string>
+						<string>Learn about shell sort, a sorting algorithm that uses h-sorting, and takes advantage of insertion sort&apos;s efficiency with nearly sorted arrays.</string>
 						<key>title</key>
 						<string>Shell Sort</string>
 					</dict>
@@ -488,9 +488,9 @@
 						<key>article</key>
 						<string>sattolos-algorithm</string>
 						<key>description</key>
-						<string>Learn about Sattolo's Algorithm, a shuffling algorithm with the property that elements cannot be shuffled to their initial position.</string>
+						<string>Learn about Sattolo&apos;s Algorithm, a shuffling algorithm with the property that elements cannot be shuffled to their initial position.</string>
 						<key>title</key>
-						<string>Sattolo's Algorithm</string>
+						<string>Sattolo&apos;s Algorithm</string>
 					</dict>
 					<dict>
 						<key>article</key>
@@ -587,9 +587,9 @@
 						<key>article</key>
 						<string>kahns-topological-sort-algorithm</string>
 						<key>description</key>
-						<string>Learn about Kahn's Topological Sort Algorithm, an algorithm for the topological ordering of a directed graph, by using depth first search.</string>
+						<string>Learn about Kahn&apos;s Topological Sort Algorithm, an algorithm for the topological ordering of a directed graph, by using depth first search.</string>
 						<key>title</key>
-						<string>Kahn's Topological Sort Algorithm</string>
+						<string>Kahn&apos;s Topological Sort Algorithm</string>
 					</dict>
 					<dict>
 						<key>article</key>
@@ -603,9 +603,9 @@
 						<key>article</key>
 						<string>kosarajus-algorithm</string>
 						<key>description</key>
-						<string>Learn about Kosaraju's Algorithm, an algorithm used for determining strongly connected components, by topological sorting and then using depth first search.</string>
+						<string>Learn about Kosaraju&apos;s Algorithm, an algorithm used for determining strongly connected components, by topological sorting and then using depth first search.</string>
 						<key>title</key>
-						<string>Kosaraju's Algorithm</string>
+						<string>Kosaraju&apos;s Algorithm</string>
 					</dict>
 					<dict>
 						<key>article</key>
@@ -635,9 +635,9 @@
 						<key>article</key>
 						<string>dijkstras-algorithm</string>
 						<key>description</key>
-						<string>Learn about Dijkstra's Algorithm, a shortest path finding algorithm that is efficient for finding shortest paths in a graph with non-negative edge weights.</string>
+						<string>Learn about Dijkstra&apos;s Algorithm, a shortest path finding algorithm that is efficient for finding shortest paths in a graph with non-negative edge weights.</string>
 						<key>title</key>
-						<string>Dijkstra's Algorithm</string>
+						<string>Dijkstra&apos;s Algorithm</string>
 					</dict>
 					<dict>
 						<key>article</key>
@@ -675,17 +675,17 @@
 						<key>article</key>
 						<string>prims-algorithm</string>
 						<key>description</key>
-						<string>Learn about Prim's Algorithm, an algorithm for finding the minimum spanning tree by always choosing the next least weight edge from the current minimum spanning tree.</string>
+						<string>Learn about Prim&apos;s Algorithm, an algorithm for finding the minimum spanning tree by always choosing the next least weight edge from the current minimum spanning tree.</string>
 						<key>title</key>
-						<string>Prim's Algorithm</string>
+						<string>Prim&apos;s Algorithm</string>
 					</dict>
 					<dict>
 						<key>article</key>
 						<string>kruskals-algorithm</string>
 						<key>description</key>
-						<string>Learn about Kruskal's Algorithm, an algorithm for finding the minimum spanning tree by always choosing the next least weight edge overall such that no cycles are formed.</string>
+						<string>Learn about Kruskal&apos;s Algorithm, an algorithm for finding the minimum spanning tree by always choosing the next least weight edge overall such that no cycles are formed.</string>
 						<key>title</key>
-						<string>Kruskal's Algorithm</string>
+						<string>Kruskal&apos;s Algorithm</string>
 					</dict>
 					<dict>
 						<key>article</key>
@@ -742,9 +742,9 @@
 						<key>article</key>
 						<string>euclids-algorithm</string>
 						<key>description</key>
-						<string>Learn about Euclid's algorithm, an efficient algorithm for computing the greatest common divisor (GCD) between two numbers.</string>
+						<string>Learn about Euclid&apos;s algorithm, an efficient algorithm for computing the greatest common divisor (GCD) between two numbers.</string>
 						<key>title</key>
-						<string>Euclid's Algorithm</string>
+						<string>Euclid&apos;s Algorithm</string>
 					</dict>
 					<dict>
 						<key>article</key>
@@ -1045,6 +1045,8 @@
 				<string>functional-programming</string>
 			</dict>
 			<dict>
+				<key>image</key>
+				<string>CardsSoftwareEngineeringDesignPatterns.png</string>
 				<key>articles</key>
 				<array>
 					<dict>
@@ -1184,8 +1186,6 @@
 						<string>Visitor</string>
 					</dict>
 				</array>
-				<key>description</key>
-				<string>Learn about software design patterns for solving common problems like factories, builders, and observers.</string>
 				<key>title</key>
 				<string>Design Patterns</string>
 				<key>topic</key>

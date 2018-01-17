@@ -11,25 +11,22 @@ import Foundation
 class Topic: Encodable, Decodable {
     
     var title: String = ""
-    var firebaseStorageURL: String = ""
-    var parentCategory: String = ""
-    var imageName: String = ""
-    var articleList: [Article] = [Article]()
+    var url: String = ""
+    var image: String = ""
+    var articleDict: [String: Article] = [String: Article]()
     
     init() {
         title = ""
-        firebaseStorageURL = ""
-        parentCategory = ""
-        imageName = ""
-        articleList = [Article]()
+        url = ""
+        image = ""
+        articleDict = [String: Article]()
     }
     
-    init(title: String, firebaseStorageURL: String, parentCategory: String, imageName: String, articleList: [Article]) {
+    init(title: String, url: String, image: String, articleDict: [String: Article]) {
         self.title = title
-        self.firebaseStorageURL = firebaseStorageURL
-        self.parentCategory = parentCategory
-        self.imageName = imageName
-        self.articleList = articleList
+        self.url = url
+        self.image = image
+        self.articleDict = articleDict
     }
     
 }

@@ -11,19 +11,19 @@ import Foundation
 class Category: Encodable, Decodable {
     
     var title: String = ""
-    var firebaseStorageURL: String = ""
-    var topicList: [Topic] = [Topic]()
+    var url: String = ""
+    var topicDict: [String: Topic] = [String: Topic]()
     
     init() {
         title = ""
-        firebaseStorageURL = ""
-        topicList = [Topic]()
+        url = ""
+        topicDict = [String: Topic]()
     }
     
-    init(title: String, firebaseStorageURL: String, topicList: [Topic]) {
+    init(title: String, url: String, topicDict: [String: Topic]) {
         self.title = title
-        self.firebaseStorageURL = firebaseStorageURL
-        self.topicList = topicList
+        self.url = url
+        self.topicDict = topicDict
     }
     
 }

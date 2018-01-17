@@ -11,21 +11,21 @@ import Foundation
 class Article: Encodable, Decodable {
     
     var title: String = ""
-    var firebaseStorageURL: String = ""
-    var parentTopic: String = ""
+    var url: String = ""
+    var description: String = ""
     var isBookmarked: Bool = false
     
     init() {
         title = ""
-        firebaseStorageURL = ""
-        parentTopic = ""
+        url = ""
+        description = ""
         isBookmarked = false
     }
     
-    init(title: String, firebaseStorageURL: String, parentTopic: String, isBookmarked: Bool) {
+    init(title: String, url: String, description: String, isBookmarked: Bool) {
         self.title = title
-        self.firebaseStorageURL = firebaseStorageURL
-        self.parentTopic = parentTopic
+        self.url = url
+        self.description = description
         self.isBookmarked = isBookmarked
     }
 }

@@ -18,13 +18,16 @@ class ExploreViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         print("ExploreView loaded")
         
+//        print(ContentSingleton.data.categoryDict["hello"])
+        print(ContentSingleton.instance().getCategory(categoryTitle: "algorithms"))
         
-        
-        
-        
+        initializeTopicViews()
     }
     
-    // MARK: - Dynamically create UIImageView objects for each topic
+    // MARK: - Dynamically create UIImageView objects for each topic from Resources/index.plist
+    func initializeTopicViews() {
+        
+    }
     
     // MARK: - Create Firebase URLS from article title, topic title, and category title
     func createFirebaseURL(articleTitle: String, topicTitle: String, categoryTitle: String) -> String {
