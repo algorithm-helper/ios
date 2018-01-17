@@ -8,11 +8,12 @@
 
 import UIKit
 
-class CategoryRow : UITableViewCell {
+class CategoryRow: UITableViewCell {
     var index = 0
 }
 
-extension CategoryRow : UICollectionViewDataSource {
+// MARK: - Configure CategoryRow as the UICollectionViewDataSource
+extension CategoryRow: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return ContentSingleton.instance().getCategoryList()[self.index].topicList.count
@@ -24,13 +25,12 @@ extension CategoryRow : UICollectionViewDataSource {
         cell.topicImageView.image = UIImage(named: ContentSingleton.instance().getCategoryList()[self.index].topicList[indexPath.row].image)
         cell.topicImageView.layer.cornerRadius = 5
         cell.topicImageView.clipsToBounds = true
-        
-        print("\(index): \(indexPath.row)")
         return cell
     }
 }
 
-extension CategoryRow : UICollectionViewDelegateFlowLayout {
+// MARK: - Configure CategoryRow as the UICollectionViewDelegateFlowLayout
+extension CategoryRow: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let itemWidth = 150
@@ -39,3 +39,21 @@ extension CategoryRow : UICollectionViewDelegateFlowLayout {
     }
     
 }
+
+// MARK: - Configure CategoryRow as the UICollectionViewDelegate
+extension CategoryRow: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("\(index) \(indexPath.row)")
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! TopicCollectionViewCell
+        cell.topicImageView.layer.opacity = 0.75
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! TopicCollectionViewCell
+        cell.topicImageView.layer.opacity = 1
+    }
+}
+

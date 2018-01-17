@@ -20,23 +20,9 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         print("ExploreView loaded")
-        
         tableView.delegate = self
         tableView.dataSource = self
     }
-    
-    // MARK: - Dynamically create UIImageView objects for each topic from Resources/index.plist
-    func initializeTopicViews() {
-        for category in ContentSingleton.instance().getCategoryList() {
-            print(category.title)
-            
-            for topic in category.topicList {
-                print(topic.title)
-                print(topic.image)
-            }
-        }
-    }
-
     
     // MARK: - Create Firebase URLS from article title, topic title, and category title
     func createFirebaseURL(articleTitle: String, topicTitle: String, categoryTitle: String) -> String {
@@ -56,7 +42,7 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
-    // MARK: - Setup UITableView
+    // MARK: - Setup UITableView, give every cell row an index number
     var cellRowIndex = 0
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -91,5 +77,4 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
     }
-    
 }
