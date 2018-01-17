@@ -9,25 +9,35 @@
 import UIKit
 import Firebase
 
-class ExploreViewController: UIViewController {
+class ExploreViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
     let FirebaseStorageBucketURL = "gs://algorithm-helper-storage.appspot.com/categories"
     
+    var imageArray = [UIImage(named: "CardsDataStructuresLists"),
+                      UIImage(named: "CardsDataStructuresTrees"),
+                      UIImage(named: "CardsDataStructuresHashing"),
+                      UIImage(named: "CardsAlgorithmsSorting"),
+                      UIImage(named: "CardsAlgorithmsSearching"),
+                      UIImage(named: "CardsAlgorithmsGraphs")]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         print("ExploreView loaded")
-        
-//        print(ContentSingleton.data.categoryDict["hello"])
-        print(ContentSingleton.instance().getCategory(categoryTitle: "algorithms"))
-        
-        initializeTopicViews()
+//        initializeTopicViews()
     }
     
     // MARK: - Dynamically create UIImageView objects for each topic from Resources/index.plist
     func initializeTopicViews() {
-        
+        for category in ContentSingleton.instance().getCategoryList() {
+            print(category.title)
+            
+            for topic in category.topicList {
+                print(topic.title)
+                print(topic.image)
+            }
+        }
     }
+
     
     // MARK: - Create Firebase URLS from article title, topic title, and category title
     func createFirebaseURL(articleTitle: String, topicTitle: String, categoryTitle: String) -> String {
@@ -45,5 +55,21 @@ class ExploreViewController: UIViewController {
                 print(str!)
             }
         }
+    }
+    
+    // MARK: - Setup UICollectionView
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return imageArray.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TopicViewCell", for: indexPath) as! TopicViewCell
+        
+        cell.topicImageView.image = imageArray[indexPath.row]
+        cell.topicImageView.layer.cornerRadius = 15
+        cell.topicImageView.clipsToBounds = true
+        
+        return cell
     }
 }

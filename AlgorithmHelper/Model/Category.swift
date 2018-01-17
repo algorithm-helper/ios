@@ -12,18 +12,18 @@ class Category: Encodable, Decodable {
     
     var title: String = ""
     var url: String = ""
-    var topicDict: [String: Topic] = [String: Topic]()
+    var topicList: [Topic] = [Topic]()
     
     init() {
         title = ""
         url = ""
-        topicDict = [String: Topic]()
+        topicList = [Topic]()
     }
     
-    init(title: String, url: String, topicDict: [String: Topic]) {
+    init(title: String, url: String, topicList: [Topic]) {
         self.title = title
         self.url = url
-        self.topicDict = topicDict
+        self.topicList = topicList
     }
     
 }

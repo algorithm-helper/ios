@@ -13,20 +13,20 @@ class Topic: Encodable, Decodable {
     var title: String = ""
     var url: String = ""
     var image: String = ""
-    var articleDict: [String: Article] = [String: Article]()
+    var articleList: [Article] = [Article]()
     
     init() {
         title = ""
         url = ""
         image = ""
-        articleDict = [String: Article]()
+        articleList = [Article]()
     }
     
-    init(title: String, url: String, image: String, articleDict: [String: Article]) {
+    init(title: String, url: String, image: String, articleList: [Article]) {
         self.title = title
         self.url = url
         self.image = image
-        self.articleDict = articleDict
+        self.articleList = articleList
     }
     
 }
