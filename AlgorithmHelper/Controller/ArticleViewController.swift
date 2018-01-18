@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import Down
+import SVProgressHUD
 
 class ArticleViewController: UIViewController {
     
@@ -22,19 +24,15 @@ class ArticleViewController: UIViewController {
     var articleTitle: String = ""
     
     @IBOutlet weak var articleBody: UILabel!
+    @IBOutlet weak var articleScrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         categoryURL = ContentSingleton.instance().getCategoryList()[categoryIndex].url
         topicURL = ContentSingleton.instance().getCategoryList()[categoryIndex].topicList[topicIndex].url
         articleURL = ContentSingleton.instance().getCategoryList()[categoryIndex].topicList[topicIndex].articleList[articleIndex].url
-        
         articleTitle = ContentSingleton.instance().getCategoryList()[categoryIndex].topicList[topicIndex].articleList[articleIndex].title
         self.navigationItem.title = articleTitle
-        
-        print("Article Index: \(categoryIndex) \(topicIndex) \(articleIndex)")
-        
         setArticleContent()
     }
     
@@ -43,30 +41,23 @@ class ArticleViewController: UIViewController {
         return "\(FirebaseStorageBucketURL)/\(categoryURL)/\(topicURL)/\(articleURL).md"
     }
     
-    // MARK: - Get article content from Firebase
-    func getArticleMarkdownFromFirebase(url: String) {
-        let storageRef = Storage.storage().reference(forURL: url)
-        storageRef.getData(maxSize: 4 * 1024 * 1024) { (data, error) in
-            if error != nil {
-                print(error!)
-            } else {
-                let str = data?.utf8String
-                print(str!)
-            }
-        }
-    }
-    
     // MARK: - Set article content
     func setArticleContent() {
+        SVProgressHUD.show()
         let url = createFirebaseURL(categoryURL: categoryURL, topicURL: topicURL, articleURL: articleURL)
         let storageRef = Storage.storage().reference(forURL: url)
         storageRef.getData(maxSize: 4 * 1024 * 1024) { (data, error) in
             if error != nil {
                 print(error!)
             } else {
-                let str = data?.utf8String
-                self.articleBody.text = str
+                let markdown = data?.utf8String
+                let markdownFormatted = (markdown?.replacingOccurrences(of: "$", with: "`", options: .literal, range: nil))!
+                let markdownView = try? DownView(frame: self.view.bounds, markdownString: markdownFormatted)
+                markdownView?.scrollView.contentInset = UIEdgeInsetsMake(0, 0, 100, 0)
+                self.articleScrollView.addSubview(markdownView!)
             }
+            
+            SVProgressHUD.dismiss()
         }
     }
 }
