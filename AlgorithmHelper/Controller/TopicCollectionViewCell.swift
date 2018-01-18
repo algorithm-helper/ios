@@ -12,5 +12,5 @@ class TopicCollectionViewCell: UICollectionViewCell {
  
     @IBOutlet weak var topicImageView: UIImageView!
     @IBOutlet weak var topicLabel: UILabel!
-    
+
 }

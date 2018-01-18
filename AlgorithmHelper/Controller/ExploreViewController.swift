@@ -15,8 +15,6 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var tableView: UITableView!
     
-    var categories = ["Action", "Drama", "Science Fiction", "Kids", "Horror"]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("ExploreView loaded")
@@ -80,8 +78,18 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     // MARK: - Segue to Topic View Controller
+    var categoryIndexSelected: Int = 0
+    var topicIndexSelected: Int = 0
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        let dest = segue.destination as! TopicViewController
+        dest.categoryIndex = categoryIndexSelected
+        dest.topicIndex = topicIndexSelected
+    }
+    
     func performSegueToTopicViewController(categoryIndex: Int, topicIndex: Int) {
+        categoryIndexSelected = categoryIndex
+        topicIndexSelected = topicIndex
         performSegue(withIdentifier: "goToTopicViewController", sender: self)
-        print("\(categoryIndex) \(topicIndex)")
     }
 }

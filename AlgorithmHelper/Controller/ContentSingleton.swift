@@ -7,10 +7,14 @@
 //
 
 import Foundation
+import UIKit
 
 class ContentSingleton {
     
     private var categoryList = [Category]()
+    private var colorList: [UIColor] = [UIColor(red: 0.2, green: 0.7098, blue: 0.898, alpha: 1.0),
+                                        UIColor(red: 0.6667, green: 0.4, blue: 0.8, alpha: 1.0),
+                                        UIColor(red: 0.3765, green: 0.4902, blue: 0.5451, alpha: 1.0)]
     
     private static let contentSingletonInstance = ContentSingleton()
     
@@ -58,5 +62,9 @@ class ContentSingleton {
     
     func getCategoryList() -> [Category] {
         return categoryList
+    }
+    
+    func getColor(categoryIndex: Int) -> UIColor {
+        return colorList[categoryIndex]
     }
 }

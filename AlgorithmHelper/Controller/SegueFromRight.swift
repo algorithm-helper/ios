@@ -1,5 +1,5 @@
 //
-//  SegueFromLeft.swift
+//  SegueFromRight.swift
 //  AlgorithmHelper
 //
 //  Created by Eric Liu on 2018-01-17.
@@ -19,7 +19,7 @@ class SegueFromRight: UIStoryboardSegue {
         
         UIView.animate(withDuration: 0.25,
            delay: 0.0,
-           options: .curveEaseInOut,
+           options: UIViewAnimationOptions.curveEaseInOut,
            animations: {
                 dst.view.transform = CGAffineTransform(translationX: 0, y: 0)
             },

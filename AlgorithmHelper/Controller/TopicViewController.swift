@@ -10,11 +10,15 @@ import UIKit
 
 class TopicViewController: UIViewController {
     
+    var categoryIndex: Int = 0
+    var topicIndex: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         print("TopicViewController loaded")
         
+        print("\(categoryIndex) \(topicIndex)")
         
     }
     
