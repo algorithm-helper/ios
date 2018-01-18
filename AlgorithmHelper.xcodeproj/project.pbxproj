@@ -20,7 +20,6 @@
 		0725EE37200EA32900EAA7EE /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0725EE36200EA32900EAA7EE /* Topic.swift */; };
 		0725EE39200EA33400EAA7EE /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0725EE38200EA33400EAA7EE /* Category.swift */; };
 		0725EE3B200EA64200EAA7EE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0725EE3A200EA64100EAA7EE /* GoogleService-Info.plist */; };
-		0725EE3F200EC87B00EAA7EE /* categories in Resources */ = {isa = PBXBuildFile; fileRef = 0725EE3E200EC87B00EAA7EE /* categories */; };
 		0725EE41200ECDAA00EAA7EE /* index.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0725EE40200ECDA900EAA7EE /* index.plist */; };
 		0725EE43200ED2C700EAA7EE /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0725EE42200ED2C700EAA7EE /* DataExtension.swift */; };
 		0725EE45200ED44600EAA7EE /* TopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0725EE44200ED44600EAA7EE /* TopicViewController.swift */; };
@@ -50,7 +49,6 @@
 		0725EE36200EA32900EAA7EE /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 		0725EE38200EA33400EAA7EE /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		0725EE3A200EA64100EAA7EE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		0725EE3E200EC87B00EAA7EE /* categories */ = {isa = PBXFileReference; lastKnownFileType = folder; path = categories; sourceTree = "<group>"; };
 		0725EE40200ECDA900EAA7EE /* index.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = index.plist; sourceTree = "<group>"; };
 		0725EE42200ED2C700EAA7EE /* DataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtension.swift; sourceTree = "<group>"; };
 		0725EE44200ED44600EAA7EE /* TopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicViewController.swift; sourceTree = "<group>"; };
@@ -155,7 +153,6 @@
 			isa = PBXGroup;
 			children = (
 				0725EE40200ECDA900EAA7EE /* index.plist */,
-				0725EE3E200EC87B00EAA7EE /* categories */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -242,7 +239,6 @@
 				0725EE1D200DC29500EAA7EE /* LaunchScreen.storyboard in Resources */,
 				0725EE3B200EA64200EAA7EE /* GoogleService-Info.plist in Resources */,
 				0725EE1A200DC29500EAA7EE /* Assets.xcassets in Resources */,
-				0725EE3F200EC87B00EAA7EE /* categories in Resources */,
 				0725EE18200DC29500EAA7EE /* Main.storyboard in Resources */,
 				0725EE41200ECDAA00EAA7EE /* index.plist in Resources */,
 			);
