@@ -52,6 +52,7 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! CategoryRow
         cell.index = cellRowIndex
+        cell.parent = self
         cellRowIndex += 1
         return cell
     }
@@ -76,5 +77,11 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
+    }
+    
+    // MARK: - Segue to Topic View Controller
+    func performSegueToTopicViewController(categoryIndex: Int, topicIndex: Int) {
+        performSegue(withIdentifier: "goToTopicViewController", sender: self)
+        print("\(categoryIndex) \(topicIndex)")
     }
 }

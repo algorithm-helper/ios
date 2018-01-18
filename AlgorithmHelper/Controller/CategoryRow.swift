@@ -10,6 +10,7 @@ import UIKit
 
 class CategoryRow: UITableViewCell {
     var index = 0
+    var parent: ExploreViewController?
 }
 
 // MARK: - Configure CategoryRow as the UICollectionViewDataSource
@@ -43,7 +44,7 @@ extension CategoryRow: UICollectionViewDelegateFlowLayout {
 // MARK: - Configure CategoryRow as the UICollectionViewDelegate
 extension CategoryRow: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("\(index) \(indexPath.row)")
+        parent?.performSegueToTopicViewController(categoryIndex: index, topicIndex: indexPath.row)
     }
     
     func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {

@@ -22,6 +22,9 @@ class BookmarksViewController: UIViewController {
     
     }
     
+    @IBAction func goToExploreButtonPressed(_ sender: UIButton) {
+        tabBarController?.selectedIndex = 0;
+    }
     
     
     
