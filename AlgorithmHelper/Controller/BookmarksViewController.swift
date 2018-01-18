@@ -8,29 +8,76 @@
 
 import UIKit
 
-class BookmarksViewController: UIViewController {
+class BookmarksViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var buttonGoToExplore: UIButton!
+    @IBOutlet weak var noBookmarksView: UIView!
+    @IBOutlet weak var bookmarksTableView: UITableView!
+    
+    var bookmarksArray = [[String: Int]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        print("BookmarksView loaded")
-        
-        // Make button borders round:
-        buttonGoToExplore.layer.cornerRadius = 0.025 * buttonGoToExplore.bounds.size.width
+        bookmarksTableView.dataSource = self
+        bookmarksTableView.delegate = self
+    }
     
+    override func viewDidAppear(_ animated: Bool) {
+        bookmarksArray = BookmarksSingleton.instance().getBookmarksArray()
+        bookmarksTableView.reloadData()
+        setupNoBookmarksView()
     }
     
     @IBAction func goToExploreButtonPressed(_ sender: UIButton) {
         tabBarController?.selectedIndex = 0;
     }
     
+    // MARK: - Setup no bookmarks view, i.e. view that is shown when no bookmarks have been added yet
     
+    func setupNoBookmarksView() {
+        if BookmarksSingleton.instance().getBookmarksDict().isEmpty {
+            bookmarksTableView.isHidden = true
+            noBookmarksView.isHidden = false
+            buttonGoToExplore.layer.cornerRadius = 0.025 * buttonGoToExplore.bounds.size.width
+        } else {
+            bookmarksTableView.isHidden = false
+            noBookmarksView.isHidden = true
+        }
+    }
     
+    // MARK: - Setup table view
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return BookmarksSingleton.instance().getBookmarksDict().count
+    }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "bookmarksTableViewCell", for: indexPath) as! BookmarksTableViewCell
+        let cellData: [String: Int] = bookmarksArray[indexPath.row]
+        cell.bookmarksLabel.text = ContentSingleton.instance()
+            .getCategoryList()[cellData["categoryIndex"]!]
+            .topicList[cellData["topicIndex"]!]
+            .articleList[cellData["articleIndex"]!]
+            .title
+        return cell
+    }
     
+    // MARK: - Prepare and perform segue change to ArticleView
+    var categoryIndexSelected: Int = 0
+    var topicIndexSelected: Int = 0
+    var articleIndexSelected: Int = 0
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dest = segue.destination as! ArticleViewController
+        dest.categoryIndex = categoryIndexSelected
+        dest.topicIndex = topicIndexSelected
+        dest.articleIndex = articleIndexSelected
+    }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cellData: [String: Int] = bookmarksArray[indexPath.row]
+        categoryIndexSelected = cellData["categoryIndex"]!
+        topicIndexSelected = cellData["topicIndex"]!
+        articleIndexSelected = cellData["articleIndex"]!
+        performSegue(withIdentifier: "goToBookmarkedArticleView", sender: self)
+    }
 }

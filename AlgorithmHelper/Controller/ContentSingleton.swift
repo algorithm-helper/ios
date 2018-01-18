@@ -76,4 +76,9 @@ class ContentSingleton {
         categoryList[categoryIndex].topicList[topicIndex].articleList[articleIndex].isBookmarked =
         !categoryList[categoryIndex].topicList[topicIndex].articleList[articleIndex].isBookmarked
     }
+    
+    // TODO: - Save the data of ContentSingleton on close of the app
+    func save() {
+        
+    }
 }

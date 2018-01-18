@@ -22,6 +22,7 @@ class ArticleViewController: UIViewController {
     var topicURL: String = ""
     var articleURL: String = ""
     var articleTitle: String = ""
+    var key = ""
     
     @IBOutlet weak var articleScrollView: UIScrollView!
     @IBOutlet weak var articleBookmark: UIBarButtonItem!
@@ -32,9 +33,10 @@ class ArticleViewController: UIViewController {
         topicURL = ContentSingleton.instance().getCategoryList()[categoryIndex].topicList[topicIndex].url
         articleURL = ContentSingleton.instance().getCategoryList()[categoryIndex].topicList[topicIndex].articleList[articleIndex].url
         articleTitle = ContentSingleton.instance().getCategoryList()[categoryIndex].topicList[topicIndex].articleList[articleIndex].title
+        key = "\(categoryURL)\(topicURL)\(articleURL)"
         self.navigationItem.title = articleTitle
         setArticleContent()
-        setBookmark()
+        setBookmark(forUpdate: false)
     }
     
     // MARK: - Create Firebase URLS from article title, topic title, and category title
@@ -52,7 +54,6 @@ class ArticleViewController: UIViewController {
                 print(error!)
             } else {
                 let markdown = data?.utf8String
-                print(markdown!)
                 let markdownFormatted = (markdown?.replacingOccurrences(of: "$", with: "`", options: .literal, range: nil))!
                 let markdownView = try? DownView(frame: self.view.bounds, markdownString: markdownFormatted)
                 markdownView?.scrollView.contentInset = UIEdgeInsetsMake(0, 0, 100, 0)
@@ -64,17 +65,25 @@ class ArticleViewController: UIViewController {
     }
     
     // MARK: - Set article's bookmark
-    func setBookmark() {
+    func setBookmark(forUpdate: Bool) {
         if ContentSingleton.instance().hasBookmark(categoryIndex: categoryIndex, topicIndex: topicIndex, articleIndex: articleIndex) {
             articleBookmark.image = UIImage(named: "IconBookmarkDark")
+            
+            if forUpdate {
+                BookmarksSingleton.instance().addBookmark(key: key, categoryIndex: categoryIndex, topicIndex: topicIndex, articleIndex: articleIndex)
+            }
         } else {
             articleBookmark.image = UIImage(named: "IconBookmark")
+            
+            if forUpdate {
+                BookmarksSingleton.instance().deleteBookmark(key: key)
+            }
         }
     }
     
     @IBAction func bookmarkPressed(_ sender: Any) {
         ContentSingleton.instance().toggleBookmark(categoryIndex: categoryIndex, topicIndex: topicIndex, articleIndex: articleIndex)
-        setBookmark()
+        setBookmark(forUpdate: true)
     }
     
 }

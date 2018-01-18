@@ -48,7 +48,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kvZ-7Z-qCi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="406" y="1151"/>
+            <point key="canvasLocation" x="1087" y="1343"/>
         </scene>
         <!--Bookmarks-->
         <scene sceneID="Xpf-0q-Tl9">
@@ -58,15 +58,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFW-Lh-C20">
-                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Bookmarks" id="KDb-sY-hGL"/>
-                                </items>
-                            </navigationBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wbg-L1-iE7">
                                 <rect key="frame" x="87" y="243.66666666666663" width="240" height="200"/>
                                 <subviews>
@@ -103,12 +94,36 @@
                                     <constraint firstAttribute="width" constant="240" id="sbj-aI-Ji5"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hOi-wM-RRZ">
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="bookmarksTableViewCell" rowHeight="50" id="7YY-lh-Ve2" customClass="BookmarksTableViewCell" customModule="AlgorithmHelper" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7YY-lh-Ve2" id="Uk0-aY-d6V">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="49.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3U-er-gJc">
+                                                    <rect key="frame" x="15" y="-3" width="384" height="53"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="bookmarksLabel" destination="a3U-er-gJc" id="let-0o-lV7"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="EFW-Lh-C20" firstAttribute="trailing" secondItem="Adh-K3-8Kg" secondAttribute="trailing" id="3Fg-C5-rXF"/>
-                            <constraint firstItem="EFW-Lh-C20" firstAttribute="top" secondItem="Adh-K3-8Kg" secondAttribute="top" id="5ST-kT-ve1"/>
-                            <constraint firstItem="EFW-Lh-C20" firstAttribute="leading" secondItem="Adh-K3-8Kg" secondAttribute="leading" id="BtC-1I-xkf"/>
                             <constraint firstItem="Wbg-L1-iE7" firstAttribute="centerY" secondItem="8iL-3P-DAB" secondAttribute="centerY" id="Rx2-XO-Pun"/>
                             <constraint firstItem="Wbg-L1-iE7" firstAttribute="centerX" secondItem="8iL-3P-DAB" secondAttribute="centerX" id="iMn-z5-CYf"/>
                         </constraints>
@@ -117,13 +132,39 @@
                     <tabBarItem key="tabBarItem" title="Bookmarks" image="IconBookmark" id="keM-KI-XO2">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-3"/>
                     </tabBarItem>
+                    <navigationItem key="navigationItem" title="Bookmarks" id="LET-Ut-RjW"/>
                     <connections>
+                        <outlet property="bookmarksTableView" destination="hOi-wM-RRZ" id="bOY-EX-8U8"/>
                         <outlet property="buttonGoToExplore" destination="TAT-ud-Pkm" id="gF0-Y8-QjO"/>
+                        <outlet property="noBookmarksView" destination="Wbg-L1-iE7" id="VXe-kE-Hfd"/>
+                        <segue destination="Zls-g5-KVa" kind="show" identifier="goToBookmarkedArticleView" id="DiC-fR-U9t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Km8-Dj-6Ag" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1196" y="638"/>
+            <point key="canvasLocation" x="1867" y="567"/>
+        </scene>
+        <!--Bookmarks-->
+        <scene sceneID="7Sw-1q-zaD">
+            <objects>
+                <navigationController id="QRe-rE-geQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Bookmarks" image="IconBookmark" id="gBx-sc-jh5">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-3"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zh8-hz-oRc">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="DOM-25-HZg" kind="relationship" relationship="rootViewController" id="Gsc-Nr-ZHt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W7u-a7-50C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1087" y="567"/>
         </scene>
         <!--Search-->
         <scene sceneID="tF4-E8-EnG">
@@ -133,21 +174,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfj-l4-pEQ">
-                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Search" id="H8v-lV-i2M"/>
-                                </items>
-                            </navigationBar>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search here..." translatesAutoresizingMaskIntoConstraints="NO" id="UNY-du-AM5">
-                                <rect key="frame" x="0.0" y="64" width="414" height="56"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="scQ-Uq-4dI">
-                                <rect key="frame" x="87" y="268.66666666666669" width="240" height="150"/>
+                                <rect key="frame" x="87" y="269" width="240" height="150"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Search Algorithm Helper" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5O-eG-Jnb">
                                         <rect key="frame" x="1" y="40" width="237" height="70"/>
@@ -169,33 +197,40 @@
                                     <constraint firstAttribute="width" constant="240" id="mYT-kg-Uad"/>
                                 </constraints>
                             </view>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search here..." translatesAutoresizingMaskIntoConstraints="NO" id="UNY-du-AM5">
+                                <rect key="frame" x="0.0" y="64" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="cfj-l4-pEQ" firstAttribute="leading" secondItem="ftB-tX-clq" secondAttribute="leading" id="1Zm-km-Lbm"/>
                             <constraint firstItem="scQ-Uq-4dI" firstAttribute="centerY" secondItem="LNz-ag-XJt" secondAttribute="centerY" id="3Qt-RM-d2s"/>
                             <constraint firstItem="scQ-Uq-4dI" firstAttribute="centerX" secondItem="LNz-ag-XJt" secondAttribute="centerX" id="P6T-ZW-9yX"/>
-                            <constraint firstItem="cfj-l4-pEQ" firstAttribute="top" secondItem="ftB-tX-clq" secondAttribute="top" id="W3Z-bi-bLZ"/>
+                            <constraint firstItem="UNY-du-AM5" firstAttribute="top" secondItem="ftB-tX-clq" secondAttribute="top" id="Ri4-So-gVw"/>
                             <constraint firstItem="UNY-du-AM5" firstAttribute="trailing" secondItem="ftB-tX-clq" secondAttribute="trailing" id="fUn-4a-svQ"/>
                             <constraint firstItem="UNY-du-AM5" firstAttribute="leading" secondItem="ftB-tX-clq" secondAttribute="leading" id="jOr-os-ZXY"/>
-                            <constraint firstItem="cfj-l4-pEQ" firstAttribute="trailing" secondItem="ftB-tX-clq" secondAttribute="trailing" id="m5R-b4-j1g"/>
-                            <constraint firstItem="UNY-du-AM5" firstAttribute="top" secondItem="cfj-l4-pEQ" secondAttribute="bottom" id="vCu-a9-kxj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ftB-tX-clq"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="IconSearch" id="SaY-Ww-Yq3">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-3"/>
                     </tabBarItem>
+                    <navigationItem key="navigationItem" title="Search" id="fpv-t6-OSK"/>
+                    <connections>
+                        <segue destination="Zls-g5-KVa" kind="show" identifier="goToSearchedArticleView" id="cGI-Oc-RRc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fdk-DE-WmH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1196" y="-160.56971514242881"/>
+            <point key="canvasLocation" x="1867" y="-167"/>
         </scene>
         <!--Explore-->
         <scene sceneID="Bgj-O7-0bQ">
             <objects>
                 <navigationController id="yN5-en-RYQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Explore" image="IconCompass" id="ptl-y4-bPp"/>
+                    <tabBarItem key="tabBarItem" title="Explore" image="IconCompass" id="ptl-y4-bPp">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-3"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Yn3-Td-OXq">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -368,7 +403,29 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Di5-cm-H8q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2889.8550724637685" y="-886.14130434782612"/>
+            <point key="canvasLocation" x="2748" y="-886"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="QK4-Gu-hcN">
+            <objects>
+                <navigationController id="Axy-bo-pmx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Search" image="IconSearch" id="bnE-1O-O65">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-3"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Sjf-BG-5C4">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ejP-rZ-Fav" kind="relationship" relationship="rootViewController" id="Wnn-Db-2cn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GUV-eW-csv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1087" y="-167"/>
         </scene>
         <!--Article Title-->
         <scene sceneID="PPe-ju-hzj">
@@ -406,7 +463,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xwf-uN-gYx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3705.7971014492755" y="-886.14130434782612"/>
+            <point key="canvasLocation" x="3555" y="-886"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="Lti-ZM-6yI">
@@ -418,14 +475,14 @@
                     </tabBar>
                     <connections>
                         <segue destination="yN5-en-RYQ" kind="relationship" relationship="viewControllers" id="ZyU-y0-si4"/>
-                        <segue destination="ejP-rZ-Fav" kind="relationship" relationship="viewControllers" id="raO-Kb-GxS"/>
-                        <segue destination="DOM-25-HZg" kind="relationship" relationship="viewControllers" id="6s9-pB-FgW"/>
+                        <segue destination="Axy-bo-pmx" kind="relationship" relationship="viewControllers" id="SGm-FW-CK5"/>
+                        <segue destination="QRe-rE-geQ" kind="relationship" relationship="viewControllers" id="iFF-Pm-SNl"/>
                         <segue destination="ajC-4o-yww" kind="relationship" relationship="viewControllers" id="fcy-8I-eA4"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vo3-Q8-zYL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-321" y="220"/>
+            <point key="canvasLocation" x="-455" y="233"/>
         </scene>
     </scenes>
     <resources>
@@ -434,4 +491,7 @@
         <image name="IconSearch" width="75" height="75"/>
         <image name="IconSettings" width="75" height="75"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="DiC-fR-U9t"/>
+    </inferredMetricsTieBreakers>
 </document>
