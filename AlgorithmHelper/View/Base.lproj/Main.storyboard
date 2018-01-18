@@ -156,7 +156,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Try searching for an article, topic, or category." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8LA-h8-wqg">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Try searching for an article." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8LA-h8-wqg">
                                         <rect key="frame" x="6" y="87" width="229" height="64"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
@@ -393,8 +393,14 @@
                     </view>
                     <navigationItem key="navigationItem" title="Article Title" id="6Gr-JR-2AD">
                         <barButtonItem key="backBarButtonItem" title="Back" id="TET-Nc-wop"/>
+                        <barButtonItem key="rightBarButtonItem" image="IconBookmark" id="WY6-U1-bld">
+                            <connections>
+                                <action selector="bookmarkPressed:" destination="Zls-g5-KVa" id="VMe-rV-zRC"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="articleBookmark" destination="WY6-U1-bld" id="lAJ-lK-Nne"/>
                         <outlet property="articleScrollView" destination="nn8-Xq-GiZ" id="bnl-rp-BUg"/>
                     </connections>
                 </viewController>

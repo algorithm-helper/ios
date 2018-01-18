@@ -13,7 +13,7 @@ import SVProgressHUD
 
 class ArticleViewController: UIViewController {
     
-    let FirebaseStorageBucketURL = "gs://algorithm-helper-storage.appspot.com/categories"
+    let FirebaseStorageBucketURL = "gs://algorithm-helper-storage.appspot.com/ios"
     
     var categoryIndex: Int = 0
     var topicIndex: Int = 0
@@ -23,8 +23,8 @@ class ArticleViewController: UIViewController {
     var articleURL: String = ""
     var articleTitle: String = ""
     
-    @IBOutlet weak var articleBody: UILabel!
     @IBOutlet weak var articleScrollView: UIScrollView!
+    @IBOutlet weak var articleBookmark: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +34,7 @@ class ArticleViewController: UIViewController {
         articleTitle = ContentSingleton.instance().getCategoryList()[categoryIndex].topicList[topicIndex].articleList[articleIndex].title
         self.navigationItem.title = articleTitle
         setArticleContent()
+        setBookmark()
     }
     
     // MARK: - Create Firebase URLS from article title, topic title, and category title
@@ -51,13 +52,29 @@ class ArticleViewController: UIViewController {
                 print(error!)
             } else {
                 let markdown = data?.utf8String
+                print(markdown!)
                 let markdownFormatted = (markdown?.replacingOccurrences(of: "$", with: "`", options: .literal, range: nil))!
                 let markdownView = try? DownView(frame: self.view.bounds, markdownString: markdownFormatted)
                 markdownView?.scrollView.contentInset = UIEdgeInsetsMake(0, 0, 100, 0)
+                markdownView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
                 self.articleScrollView.addSubview(markdownView!)
             }
-            
             SVProgressHUD.dismiss()
         }
     }
+    
+    // MARK: - Set article's bookmark
+    func setBookmark() {
+        if ContentSingleton.instance().hasBookmark(categoryIndex: categoryIndex, topicIndex: topicIndex, articleIndex: articleIndex) {
+            articleBookmark.image = UIImage(named: "IconBookmarkDark")
+        } else {
+            articleBookmark.image = UIImage(named: "IconBookmark")
+        }
+    }
+    
+    @IBAction func bookmarkPressed(_ sender: Any) {
+        ContentSingleton.instance().toggleBookmark(categoryIndex: categoryIndex, topicIndex: topicIndex, articleIndex: articleIndex)
+        setBookmark()
+    }
+    
 }

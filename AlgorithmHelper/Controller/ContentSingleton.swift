@@ -67,4 +67,13 @@ class ContentSingleton {
     func getColor(categoryIndex: Int) -> UIColor {
         return colorList[categoryIndex]
     }
+    
+    func hasBookmark(categoryIndex: Int, topicIndex: Int, articleIndex: Int) -> Bool {
+        return categoryList[categoryIndex].topicList[topicIndex].articleList[articleIndex].isBookmarked
+    }
+    
+    func toggleBookmark(categoryIndex: Int, topicIndex: Int, articleIndex: Int) {
+        categoryList[categoryIndex].topicList[topicIndex].articleList[articleIndex].isBookmarked =
+        !categoryList[categoryIndex].topicList[topicIndex].articleList[articleIndex].isBookmarked
+    }
 }
