@@ -10,8 +10,6 @@ import UIKit
 import Firebase
 
 class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-    let FirebaseStorageBucketURL = "gs://algorithm-helper-storage.appspot.com/categories"
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -22,27 +20,8 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.dataSource = self
     }
     
-    // MARK: - Create Firebase URLS from article title, topic title, and category title
-    func createFirebaseURL(articleTitle: String, topicTitle: String, categoryTitle: String) -> String {
-        return "\(FirebaseStorageBucketURL)/\(categoryTitle)/\(topicTitle)/\(articleTitle)"
-    }
-    
-    // MARK: - Get article content from Firebase
-    func getArticleMarkdownFromFirebase(categoryTitle: String, topicTitle: String, articleTitle: String) {
-        let storageRef = Storage.storage().reference(forURL: "\(FirebaseStorageBucketURL)/\(categoryTitle)/\(topicTitle)/\(articleTitle).md")
-        storageRef.getData(maxSize: 4 * 1024 * 1024) { (data, error) in
-            if error != nil {
-                print(error!)
-            } else {
-                let str = data?.utf8String
-                print(str!)
-            }
-        }
-    }
-    
     // MARK: - Setup UITableView, give every cell row an index number
     var cellRowIndex = 0
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
@@ -85,8 +64,6 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
         let dest = segue.destination as! TopicViewController
         dest.categoryIndex = categoryIndexSelected
         dest.topicIndex = topicIndexSelected
-        // Change font of the back button:
-        // dest.navigationItem.backBarButtonItem?.setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: "Avenir", size: 18)!], for: UIControlState.normal)
     }
     
     func performSegueToTopicViewController(categoryIndex: Int, topicIndex: Int) {

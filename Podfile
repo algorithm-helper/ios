@@ -13,6 +13,7 @@ target 'AlgorithmHelper' do
     pod 'Firebase/Storage'
     pod 'SVProgressHUD'
     pod 'ChameleonFramework'
+    pod 'Down'
 
 end
 

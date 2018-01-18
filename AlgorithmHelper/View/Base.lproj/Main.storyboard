@@ -358,7 +358,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MLv-It-dG2"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Topic Title" id="1vB-p4-rlc"/>
+                    <navigationItem key="navigationItem" title="Topic Title" id="1vB-p4-rlc">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="81n-DN-LF1"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="articleTableView" destination="OZ0-Eu-AgL" id="T3X-KL-puW"/>
                         <segue destination="Zls-g5-KVa" kind="show" identifier="goToArticleView" id="UxE-Uw-Mab"/>
@@ -375,14 +377,58 @@
                     <view key="view" contentMode="scaleToFill" id="pcZ-vk-zZf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nn8-Xq-GiZ">
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6a-VB-dG1" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="72"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="2000" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZf-rr-xxQ">
+                                                <rect key="frame" x="8" y="8" width="398" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="XZf-rr-xxQ" firstAttribute="leading" secondItem="b6a-VB-dG1" secondAttribute="leading" constant="8" id="MpJ-Up-OVZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="XZf-rr-xxQ" secondAttribute="trailing" constant="8" id="XZ4-2y-iJr"/>
+                                            <constraint firstItem="XZf-rr-xxQ" firstAttribute="top" secondItem="b6a-VB-dG1" secondAttribute="top" constant="8" id="bY9-VT-AXv"/>
+                                            <constraint firstAttribute="bottom" secondItem="XZf-rr-xxQ" secondAttribute="bottom" constant="64" id="efI-Ev-BN3"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="b6a-VB-dG1" firstAttribute="top" secondItem="nn8-Xq-GiZ" secondAttribute="top" id="9Pw-1J-OdP"/>
+                                    <constraint firstAttribute="bottom" secondItem="b6a-VB-dG1" secondAttribute="bottom" id="Umw-tP-CDZ"/>
+                                    <constraint firstItem="b6a-VB-dG1" firstAttribute="leading" secondItem="nn8-Xq-GiZ" secondAttribute="leading" id="gKM-Vl-3Rs"/>
+                                    <constraint firstAttribute="trailing" secondItem="b6a-VB-dG1" secondAttribute="trailing" id="k8R-kK-FDj"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="b6a-VB-dG1" firstAttribute="height" secondItem="pcZ-vk-zZf" secondAttribute="height" priority="250" id="8Kl-Tv-zVg"/>
+                            <constraint firstItem="nn8-Xq-GiZ" firstAttribute="trailing" secondItem="8Wy-0W-kwW" secondAttribute="trailing" id="E8f-ed-cGC"/>
+                            <constraint firstItem="b6a-VB-dG1" firstAttribute="width" secondItem="pcZ-vk-zZf" secondAttribute="width" id="Sry-Jy-ogx"/>
+                            <constraint firstItem="nn8-Xq-GiZ" firstAttribute="top" secondItem="8Wy-0W-kwW" secondAttribute="top" id="brM-aK-wI5"/>
+                            <constraint firstItem="nn8-Xq-GiZ" firstAttribute="bottom" secondItem="8Wy-0W-kwW" secondAttribute="bottom" id="ivx-U0-wu9"/>
+                            <constraint firstItem="nn8-Xq-GiZ" firstAttribute="leading" secondItem="8Wy-0W-kwW" secondAttribute="leading" id="t3p-zq-2pe"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="8Wy-0W-kwW"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Article Title" id="6Gr-JR-2AD"/>
+                    <navigationItem key="navigationItem" title="Article Title" id="6Gr-JR-2AD">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="TET-Nc-wop"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="articleBody" destination="XZf-rr-xxQ" id="ZK3-Ym-JMP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xwf-uN-gYx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3707" y="-886"/>
+            <point key="canvasLocation" x="3705.7971014492755" y="-886.14130434782612"/>
         </scene>
         <!--Tab Bar View Controller-->
         <scene sceneID="Lti-ZM-6yI">

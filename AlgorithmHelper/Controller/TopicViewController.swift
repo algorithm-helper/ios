@@ -14,6 +14,7 @@ class TopicViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var topicIndex: Int = 0
     var topicTitle: String = ""
     var numRows: Int = 0
+    var articleIndexSelected: Int = 0
     
     @IBOutlet weak var articleTableView: UITableView!
     
@@ -43,4 +44,15 @@ class TopicViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        let dest = segue.destination as! ArticleViewController
+        dest.categoryIndex = categoryIndex
+        dest.topicIndex = topicIndex
+        dest.articleIndex = articleIndexSelected
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        articleIndexSelected = indexPath.row
+        performSegue(withIdentifier: "goToArticleView", sender: self)
+    }
 }
