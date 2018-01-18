@@ -35,7 +35,7 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return ContentSingleton.instance().getCategoryList().count
+        return Content.instance().getCategoryList().count
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -46,7 +46,7 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
             tableView.bounds.size.width, height: tableView.bounds.size.height))
         headerLabel.font = UIFont(name: "Avenir-Bold", size: 18)
         headerLabel.textColor = UIColor.black
-        headerLabel.text = ContentSingleton.instance().getCategoryList()[section].title
+        headerLabel.text = Content.instance().getCategoryList()[section].title
         headerLabel.sizeToFit()
         headerView.addSubview(headerLabel)
         return headerView

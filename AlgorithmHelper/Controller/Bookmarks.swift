@@ -1,6 +1,9 @@
 //
-//  BookmarksSingleton.swift
+//  Bookmarks.swift
 //  AlgorithmHelper
+//
+//  Provides a singleton instance of Bookmarks, which contains a Dictionary to
+//  each Article and their associated category/topic/article indices.
 //
 //  Created by Eric Liu on 2018-01-18.
 //  Copyright © 2018 Eric Liu. All rights reserved.
@@ -9,14 +12,14 @@
 import Foundation
 import UIKit
 
-class BookmarksSingleton {
+class Bookmarks {
     
     private var bookmarksDict = [String: [String: Int]]()
     
-    private static let bookmarksSingletonInstance = BookmarksSingleton()
+    private static let bookmarksSingleton = Bookmarks()
     
-    static func instance() -> BookmarksSingleton {
-        return bookmarksSingletonInstance
+    static func instance() -> Bookmarks {
+        return bookmarksSingleton
     }
     
     func getBookmarksDict() -> [String: [String: Int]] {

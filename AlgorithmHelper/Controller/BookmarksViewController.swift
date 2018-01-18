@@ -23,9 +23,9 @@ class BookmarksViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        bookmarksArray = BookmarksSingleton.instance().getBookmarksArray()
-        bookmarksTableView.reloadData()
         setupNoBookmarksView()
+        bookmarksArray = Bookmarks.instance().getBookmarksArray()
+        bookmarksTableView.reloadData()
     }
     
     @IBAction func goToExploreButtonPressed(_ sender: UIButton) {
@@ -33,9 +33,8 @@ class BookmarksViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     // MARK: - Setup no bookmarks view, i.e. view that is shown when no bookmarks have been added yet
-    
     func setupNoBookmarksView() {
-        if BookmarksSingleton.instance().getBookmarksDict().isEmpty {
+        if Bookmarks.instance().getBookmarksDict().isEmpty {
             bookmarksTableView.isHidden = true
             noBookmarksView.isHidden = false
             buttonGoToExplore.layer.cornerRadius = 0.025 * buttonGoToExplore.bounds.size.width
@@ -47,13 +46,13 @@ class BookmarksViewController: UIViewController, UITableViewDelegate, UITableVie
     
     // MARK: - Setup table view
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return BookmarksSingleton.instance().getBookmarksDict().count
+        return Bookmarks.instance().getBookmarksDict().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bookmarksTableViewCell", for: indexPath) as! BookmarksTableViewCell
         let cellData: [String: Int] = bookmarksArray[indexPath.row]
-        cell.bookmarksLabel.text = ContentSingleton.instance()
+        cell.bookmarksLabel.text = Content.instance()
             .getCategoryList()[cellData["categoryIndex"]!]
             .topicList[cellData["topicIndex"]!]
             .articleList[cellData["articleIndex"]!]

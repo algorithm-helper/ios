@@ -1,6 +1,9 @@
 //
-//  ContentSingleton.swift
+//  Content.swift
 //  AlgorithmHelper
+//
+//  Provides a singleton instance of Content, which has the Category/Topic/Article data
+//  in their respective tree structure.
 //
 //  Created by Eric Liu on 2018-01-16.
 //  Copyright © 2018 Eric Liu. All rights reserved.
@@ -9,17 +12,17 @@
 import Foundation
 import UIKit
 
-class ContentSingleton {
+class Content {
     
     private var categoryList = [Category]()
     private var colorList: [UIColor] = [UIColor(red: 0.2, green: 0.7098, blue: 0.898, alpha: 1.0),
                                         UIColor(red: 0.6667, green: 0.4, blue: 0.8, alpha: 1.0),
                                         UIColor(red: 0.3765, green: 0.4902, blue: 0.5451, alpha: 1.0)]
     
-    private static let contentSingletonInstance = ContentSingleton()
+    private static let contentSingleton = Content()
     
-    static func instance() -> ContentSingleton {
-        return contentSingletonInstance
+    static func instance() -> Content {
+        return contentSingleton
     }
     
     func initializeData() {

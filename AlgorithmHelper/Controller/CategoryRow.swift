@@ -17,13 +17,13 @@ class CategoryRow: UITableViewCell {
 extension CategoryRow: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return ContentSingleton.instance().getCategoryList()[self.index].topicList.count
+        return Content.instance().getCategoryList()[self.index].topicList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "topicCell", for: indexPath) as! TopicCollectionViewCell
-        cell.topicLabel.text = ContentSingleton.instance().getCategoryList()[self.index].topicList[indexPath.row].title
-        cell.topicImageView.image = UIImage(named: ContentSingleton.instance().getCategoryList()[self.index].topicList[indexPath.row].image)
+        cell.topicLabel.text = Content.instance().getCategoryList()[self.index].topicList[indexPath.row].title
+        cell.topicImageView.image = UIImage(named: Content.instance().getCategoryList()[self.index].topicList[indexPath.row].image)
         cell.topicImageView.layer.cornerRadius = 5
         cell.topicImageView.clipsToBounds = true
         return cell

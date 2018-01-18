@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: "Avenir-Medium", size: 16)!], for: UIControlState.normal)
         
         // Setup ContentSingleton:
-        ContentSingleton.instance().initializeData()
+        Content.instance().initializeData()
         
         // Setup Firebase:
         FirebaseApp.configure()

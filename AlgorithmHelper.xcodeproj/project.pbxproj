@@ -24,11 +24,11 @@
 		0725EE43200ED2C700EAA7EE /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0725EE42200ED2C700EAA7EE /* DataExtension.swift */; };
 		0725EE45200ED44600EAA7EE /* TopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0725EE44200ED44600EAA7EE /* TopicViewController.swift */; };
 		0725EE47200ED46B00EAA7EE /* ArticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0725EE46200ED46B00EAA7EE /* ArticleViewController.swift */; };
-		0725EE4B200EE00300EAA7EE /* ContentSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0725EE4A200EE00300EAA7EE /* ContentSingleton.swift */; };
+		0725EE4B200EE00300EAA7EE /* Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0725EE4A200EE00300EAA7EE /* Content.swift */; };
 		0725EE57200FE7A400EAA7EE /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0725EE56200FE7A400EAA7EE /* CategoryRow.swift */; };
 		0725EE59200FFA4300EAA7EE /* TopicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0725EE58200FFA4300EAA7EE /* TopicCollectionViewCell.swift */; };
 		075A3605201036F00097FEA0 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075A3604201036F00097FEA0 /* ArticleTableViewCell.swift */; };
-		075A360720107D7A0097FEA0 /* BookmarksSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075A360620107D7A0097FEA0 /* BookmarksSingleton.swift */; };
+		075A360720107D7A0097FEA0 /* Bookmarks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075A360620107D7A0097FEA0 /* Bookmarks.swift */; };
 		075A36092010F8BB0097FEA0 /* BookmarksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075A36082010F8BB0097FEA0 /* BookmarksTableViewCell.swift */; };
 		A746F0A4103D14C27863EDA4 /* Pods_AlgorithmHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD69DBE6B45C570A35E69C80 /* Pods_AlgorithmHelper.framework */; };
 /* End PBXBuildFile section */
@@ -53,11 +53,11 @@
 		0725EE42200ED2C700EAA7EE /* DataExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtension.swift; sourceTree = "<group>"; };
 		0725EE44200ED44600EAA7EE /* TopicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicViewController.swift; sourceTree = "<group>"; };
 		0725EE46200ED46B00EAA7EE /* ArticleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewController.swift; sourceTree = "<group>"; };
-		0725EE4A200EE00300EAA7EE /* ContentSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSingleton.swift; sourceTree = "<group>"; };
+		0725EE4A200EE00300EAA7EE /* Content.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Content.swift; sourceTree = "<group>"; };
 		0725EE56200FE7A400EAA7EE /* CategoryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
 		0725EE58200FFA4300EAA7EE /* TopicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicCollectionViewCell.swift; sourceTree = "<group>"; };
 		075A3604201036F00097FEA0 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
-		075A360620107D7A0097FEA0 /* BookmarksSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksSingleton.swift; sourceTree = "<group>"; };
+		075A360620107D7A0097FEA0 /* Bookmarks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmarks.swift; sourceTree = "<group>"; };
 		075A36082010F8BB0097FEA0 /* BookmarksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarksTableViewCell.swift; sourceTree = "<group>"; };
 		A12FAEEB7A91614301891A81 /* Pods-AlgorithmHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlgorithmHelper.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlgorithmHelper/Pods-AlgorithmHelper.release.xcconfig"; sourceTree = "<group>"; };
 		DD69DBE6B45C570A35E69C80 /* Pods_AlgorithmHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlgorithmHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,11 +139,11 @@
 				0725EE42200ED2C700EAA7EE /* DataExtension.swift */,
 				0725EE44200ED44600EAA7EE /* TopicViewController.swift */,
 				0725EE46200ED46B00EAA7EE /* ArticleViewController.swift */,
-				0725EE4A200EE00300EAA7EE /* ContentSingleton.swift */,
+				0725EE4A200EE00300EAA7EE /* Content.swift */,
 				0725EE56200FE7A400EAA7EE /* CategoryRow.swift */,
 				0725EE58200FFA4300EAA7EE /* TopicCollectionViewCell.swift */,
 				075A3604201036F00097FEA0 /* ArticleTableViewCell.swift */,
-				075A360620107D7A0097FEA0 /* BookmarksSingleton.swift */,
+				075A360620107D7A0097FEA0 /* Bookmarks.swift */,
 				075A36082010F8BB0097FEA0 /* BookmarksTableViewCell.swift */,
 			);
 			path = Controller;
@@ -320,10 +320,10 @@
 				0725EE35200EA31B00EAA7EE /* Article.swift in Sources */,
 				0725EE47200ED46B00EAA7EE /* ArticleViewController.swift in Sources */,
 				0725EE31200E9D8F00EAA7EE /* BookmarksViewController.swift in Sources */,
-				0725EE4B200EE00300EAA7EE /* ContentSingleton.swift in Sources */,
+				0725EE4B200EE00300EAA7EE /* Content.swift in Sources */,
 				0725EE57200FE7A400EAA7EE /* CategoryRow.swift in Sources */,
 				0725EE15200DC29500EAA7EE /* TabBarViewController.swift in Sources */,
-				075A360720107D7A0097FEA0 /* BookmarksSingleton.swift in Sources */,
+				075A360720107D7A0097FEA0 /* Bookmarks.swift in Sources */,
 				0725EE13200DC29500EAA7EE /* AppDelegate.swift in Sources */,
 				0725EE2E200E9D7400EAA7EE /* SearchViewController.swift in Sources */,
 				075A3605201036F00097FEA0 /* ArticleTableViewCell.swift in Sources */,
@@ -476,7 +476,7 @@
 				DEVELOPMENT_TEAM = U8UNC2P9GS;
 				INFOPLIST_FILE = AlgorithmHelper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.algorithmhelper.AlgorithmHelper;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.ericliu.AlgorithmHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -492,7 +492,7 @@
 				DEVELOPMENT_TEAM = U8UNC2P9GS;
 				INFOPLIST_FILE = AlgorithmHelper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.algorithmhelper.AlgorithmHelper;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.ericliu.AlgorithmHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

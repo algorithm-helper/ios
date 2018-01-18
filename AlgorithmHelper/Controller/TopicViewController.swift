@@ -26,8 +26,8 @@ class TopicViewController: UIViewController, UITableViewDelegate, UITableViewDat
         articleTableView.delegate = self
         articleTableView.dataSource = self
         
-        topicTitle = ContentSingleton.instance().getCategoryList()[categoryIndex].topicList[topicIndex].title
-        numRows = ContentSingleton.instance().getCategoryList()[categoryIndex].topicList[topicIndex].articleList.count
+        topicTitle = Content.instance().getCategoryList()[categoryIndex].topicList[topicIndex].title
+        numRows = Content.instance().getCategoryList()[categoryIndex].topicList[topicIndex].articleList.count
         self.navigationItem.title = topicTitle
         
         print("\(categoryIndex) \(topicIndex)")
@@ -40,7 +40,7 @@ class TopicViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "articleTableViewCell", for: indexPath) as! ArticleTableViewCell
-        cell.articleLabel.text = ContentSingleton.instance().getCategoryList()[categoryIndex].topicList[topicIndex].articleList[indexPath.row].title
+        cell.articleLabel.text = Content.instance().getCategoryList()[categoryIndex].topicList[topicIndex].articleList[indexPath.row].title
         return cell
     }
     
