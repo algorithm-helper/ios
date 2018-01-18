@@ -85,11 +85,13 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
         let dest = segue.destination as! TopicViewController
         dest.categoryIndex = categoryIndexSelected
         dest.topicIndex = topicIndexSelected
+        // Change font of the back button:
+        // dest.navigationItem.backBarButtonItem?.setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: "Avenir", size: 18)!], for: UIControlState.normal)
     }
     
     func performSegueToTopicViewController(categoryIndex: Int, topicIndex: Int) {
         categoryIndexSelected = categoryIndex
         topicIndexSelected = topicIndex
-        performSegue(withIdentifier: "goToTopicViewController", sender: self)
+        performSegue(withIdentifier: "goToTopicView", sender: self)
     }
 }

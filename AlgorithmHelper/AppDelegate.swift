@@ -20,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Setup UITabBarView to have Avenir 9 font:
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: "Avenir", size: 9)!], for: UIControlState.normal)
         
+        // Setup UIBarButtonItem to have Avenir Medium 16 font:
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: "Avenir-Medium", size: 16)!], for: UIControlState.normal)
+        
         // Setup ContentSingleton:
         ContentSingleton.instance().initializeData()
         

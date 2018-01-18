@@ -30,6 +30,7 @@
 		0725EE59200FFA4300EAA7EE /* TopicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0725EE58200FFA4300EAA7EE /* TopicCollectionViewCell.swift */; };
 		075A35FB2010191E0097FEA0 /* SegueFromRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075A35FA2010191E0097FEA0 /* SegueFromRight.swift */; };
 		075A360320101E920097FEA0 /* SegueRevertLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075A360220101E920097FEA0 /* SegueRevertLeft.swift */; };
+		075A3605201036F00097FEA0 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075A3604201036F00097FEA0 /* ArticleTableViewCell.swift */; };
 		A746F0A4103D14C27863EDA4 /* Pods_AlgorithmHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD69DBE6B45C570A35E69C80 /* Pods_AlgorithmHelper.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		0725EE58200FFA4300EAA7EE /* TopicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicCollectionViewCell.swift; sourceTree = "<group>"; };
 		075A35FA2010191E0097FEA0 /* SegueFromRight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueFromRight.swift; sourceTree = "<group>"; };
 		075A360220101E920097FEA0 /* SegueRevertLeft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueRevertLeft.swift; sourceTree = "<group>"; };
+		075A3604201036F00097FEA0 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		A12FAEEB7A91614301891A81 /* Pods-AlgorithmHelper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlgorithmHelper.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlgorithmHelper/Pods-AlgorithmHelper.release.xcconfig"; sourceTree = "<group>"; };
 		DD69DBE6B45C570A35E69C80 /* Pods_AlgorithmHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlgorithmHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3C84D3F8FE71315C75F7B70 /* Pods-AlgorithmHelper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlgorithmHelper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlgorithmHelper/Pods-AlgorithmHelper.debug.xcconfig"; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				0725EE58200FFA4300EAA7EE /* TopicCollectionViewCell.swift */,
 				075A35FA2010191E0097FEA0 /* SegueFromRight.swift */,
 				075A360220101E920097FEA0 /* SegueRevertLeft.swift */,
+				075A3604201036F00097FEA0 /* ArticleTableViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				075A35FB2010191E0097FEA0 /* SegueFromRight.swift in Sources */,
 				0725EE13200DC29500EAA7EE /* AppDelegate.swift in Sources */,
 				0725EE2E200E9D7400EAA7EE /* SearchViewController.swift in Sources */,
+				075A3605201036F00097FEA0 /* ArticleTableViewCell.swift in Sources */,
 				0725EE39200EA33400EAA7EE /* Category.swift in Sources */,
 				0725EE37200EA32900EAA7EE /* Topic.swift in Sources */,
 				0725EE2C200E9D6700EAA7EE /* ExploreViewController.swift in Sources */,
