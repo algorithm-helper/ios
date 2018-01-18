@@ -23,8 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Setup UIBarButtonItem to have Avenir Medium 16 font:
         UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: "Avenir-Medium", size: 16)!], for: UIControlState.normal)
         
-        // Setup ContentSingleton:
+        // Setup Content singleton instance:
         Content.instance().initializeData()
+        
+        // Setup SearchIndex singleton instance:
+        SearchIndex.instance().initializeSearchIndex()
         
         // Setup Firebase:
         FirebaseApp.configure()

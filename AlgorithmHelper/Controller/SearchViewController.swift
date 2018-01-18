@@ -19,6 +19,9 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
         super.viewDidLoad()
         searchBar.delegate = self
         hideKeyboard()
+        
+        
+        print(SearchIndex.instance().getKeysWithPrefix(key: "bin")!)
     }
     
     override func viewDidAppear(_ animated: Bool) {
