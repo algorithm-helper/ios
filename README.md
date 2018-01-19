@@ -6,10 +6,10 @@ iOS devices running iOS 11+ (iPhone/iPad/iPod Touch).
 <table align="center">
     <tr>
         <td>
-            <img src="https://media.giphy.com/media/xULW8xOk7BfzeeoNDG/giphy.gif" width="300px">
+            <img src="https://media.giphy.com/media/xULW8xOk7BfzeeoNDG/giphy.gif" width="250px">
         </td>
         <td>
-            <img src="https://media.giphy.com/media/xULW8vrhRjtBv3UJ8c/giphy.gif" width="300px">
+            <img src="https://media.giphy.com/media/xULW8vrhRjtBv3UJ8c/giphy.gif" width="250px">
         </td>
     </tr>
 </table>
