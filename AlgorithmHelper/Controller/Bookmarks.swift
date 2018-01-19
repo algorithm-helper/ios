@@ -58,6 +58,12 @@ class Bookmarks {
     }
     
     func save() {
-        
+        UserDefaults.standard.set(bookmarksDict, forKey: "AlgorithmHelperData")
+    }
+    
+    func load() {
+        if UserDefaults.standard.object(forKey: "AlgorithmHelperData") != nil {
+            bookmarksDict = UserDefaults.standard.dictionary(forKey: "AlgorithmHelperData") as! [String: [String: Int]]
+        }
     }
 }

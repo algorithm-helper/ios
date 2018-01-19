@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Topic: Encodable, Decodable {
+class Topic {
     
     var title: String = ""
     var url: String = ""

@@ -19,6 +19,7 @@ class BookmarksViewController: UIViewController, UITableViewDelegate, UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        bookmarksArray = Bookmarks.instance().getBookmarksArray()
         bookmarksTableView.dataSource = self
         bookmarksTableView.delegate = self
     }
