@@ -80,6 +80,18 @@ class Content {
         !categoryList[categoryIndex].topicList[topicIndex].articleList[articleIndex].isBookmarked
     }
     
+    func getArticle(categoryIndex: Int, topicIndex: Int, articleIndex: Int) -> Article {
+        return categoryList[categoryIndex].topicList[topicIndex].articleList[articleIndex]
+    }
+    
+    func getTopic(categoryIndex: Int, topicIndex: Int) -> Topic {
+        return categoryList[categoryIndex].topicList[topicIndex]
+    }
+    
+    func getCategory(categoryIndex: Int) -> Category {
+        return categoryList[categoryIndex]
+    }
+    
     // TODO: - Save the data of ContentSingleton on close of the app
     func save() {
         

@@ -61,22 +61,24 @@ class BookmarksViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     // MARK: - Prepare and perform segue change to ArticleView
-    var categoryIndexSelected: Int = 0
-    var topicIndexSelected: Int = 0
-    var articleIndexSelected: Int = 0
+    var selected = [0, 0, 0]
+    
+//    var categoryIndexSelected: Int = 0
+//    var topicIndexSelected: Int = 0
+//    var articleIndexSelected: Int = 0
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dest = segue.destination as! ArticleViewController
-        dest.categoryIndex = categoryIndexSelected
-        dest.topicIndex = topicIndexSelected
-        dest.articleIndex = articleIndexSelected
+        dest.categoryIndex = selected[0]
+        dest.topicIndex = selected[1]
+        dest.articleIndex = selected[2]
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cellData: [String: Int] = bookmarksArray[indexPath.row]
-        categoryIndexSelected = cellData["categoryIndex"]!
-        topicIndexSelected = cellData["topicIndex"]!
-        articleIndexSelected = cellData["articleIndex"]!
+        selected[0] = cellData["categoryIndex"]!
+        selected[1] = cellData["topicIndex"]!
+        selected[2] = cellData["articleIndex"]!
         performSegue(withIdentifier: "goToBookmarkedArticleView", sender: self)
     }
 }

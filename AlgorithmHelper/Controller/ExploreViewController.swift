@@ -13,15 +13,17 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var tableView: UITableView!
     
+    var cellRowIndex = 0
+    var categoryIndexSelected: Int = 0
+    var topicIndexSelected: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("ExploreView loaded")
         tableView.delegate = self
         tableView.dataSource = self
     }
     
     // MARK: - Setup UITableView, give every cell row an index number
-    var cellRowIndex = 0
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
@@ -57,9 +59,6 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     // MARK: - Segue to Topic View Controller
-    var categoryIndexSelected: Int = 0
-    var topicIndexSelected: Int = 0
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         let dest = segue.destination as! TopicViewController
         dest.categoryIndex = categoryIndexSelected

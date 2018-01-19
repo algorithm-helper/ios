@@ -20,7 +20,6 @@ class TopicViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("TopicViewController loaded")
         
         // Set this TopicViewController as the delegate and dataSource to the articleTableView:
         articleTableView.delegate = self
@@ -29,8 +28,6 @@ class TopicViewController: UIViewController, UITableViewDelegate, UITableViewDat
         topicTitle = Content.instance().getCategoryList()[categoryIndex].topicList[topicIndex].title
         numRows = Content.instance().getCategoryList()[categoryIndex].topicList[topicIndex].articleList.count
         self.navigationItem.title = topicTitle
-        
-        print("\(categoryIndex) \(topicIndex)")
     }
     
     // MARK: - Setup UITableView

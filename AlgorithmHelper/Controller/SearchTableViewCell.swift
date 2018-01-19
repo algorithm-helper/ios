@@ -1,5 +1,5 @@
 //
-//  BookmarksTableViewCell.swift
+//  SearchTableViewCell.swift
 //  AlgorithmHelper
 //
 //  Created by Eric Liu on 2018-01-18.
@@ -8,9 +8,10 @@
 
 import UIKit
 
-class BookmarksTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var bookmarksLabel: UILabel!
+class SearchTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var searchResultLabel: UILabel!
+    @IBOutlet weak var searchResultLabelSecondary: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,4 +20,5 @@ class BookmarksTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+
 }

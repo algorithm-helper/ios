@@ -89,5 +89,4 @@ class ArticleViewController: UIViewController {
         Content.instance().toggleBookmark(categoryIndex: categoryIndex, topicIndex: topicIndex, articleIndex: articleIndex)
         setBookmark(forUpdate: true)
     }
-    
 }
