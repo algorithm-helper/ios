@@ -488,7 +488,7 @@
 				DEVELOPMENT_TEAM = U8UNC2P9GS;
 				INFOPLIST_FILE = AlgorithmHelper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ca.ericliu.AlgorithmHelper;
+				PRODUCT_BUNDLE_IDENTIFIER = com.algorithmhelperAlgorithmHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -504,7 +504,7 @@
 				DEVELOPMENT_TEAM = U8UNC2P9GS;
 				INFOPLIST_FILE = AlgorithmHelper/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ca.ericliu.AlgorithmHelper;
+				PRODUCT_BUNDLE_IDENTIFIER = com.algorithmhelperAlgorithmHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -15,6 +15,7 @@ class BookmarksViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var bookmarksTableView: UITableView!
     
     var bookmarksArray = [[String: Int]]()
+    var selected = [0, 0, 0]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,12 +62,6 @@ class BookmarksViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     // MARK: - Prepare and perform segue change to ArticleView
-    var selected = [0, 0, 0]
-    
-//    var categoryIndexSelected: Int = 0
-//    var topicIndexSelected: Int = 0
-//    var articleIndexSelected: Int = 0
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dest = segue.destination as! ArticleViewController
         dest.categoryIndex = selected[0]
