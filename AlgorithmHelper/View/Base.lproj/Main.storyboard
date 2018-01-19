@@ -17,38 +17,105 @@
     </customFonts>
     <scenes>
         <!--Settings-->
-        <scene sceneID="Fc8-r7-R9t">
+        <scene sceneID="pwp-Tr-Rzg">
             <objects>
-                <viewController id="ajC-4o-yww" customClass="SettingsViewController" customModule="AlgorithmHelper" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="laO-NY-hLD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                <tableViewController id="e5c-S3-hZD" customClass="SettingsViewController" customModule="AlgorithmHelper" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="d7N-j1-TiR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUT-B4-5Ax">
-                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Settings" id="JfE-RU-RCa"/>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="dUT-B4-5Ax" firstAttribute="top" secondItem="eFx-k0-02J" secondAttribute="top" id="TFI-fj-l2f"/>
-                            <constraint firstItem="dUT-B4-5Ax" firstAttribute="leading" secondItem="eFx-k0-02J" secondAttribute="leading" id="jNK-mg-yrJ"/>
-                            <constraint firstItem="dUT-B4-5Ax" firstAttribute="trailing" secondItem="eFx-k0-02J" secondAttribute="trailing" id="tSW-5N-cAx"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="eFx-k0-02J"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="IconSettings" id="SuN-LB-Y4a">
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="General" footerTitle="Made with ☕ by Eric Liu." id="8fC-F2-KiU">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="bfQ-AE-wm4" style="IBUITableViewCellStyleDefault" id="MXQ-vU-piP">
+                                        <rect key="frame" x="0.0" y="55.333333333333336" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MXQ-vU-piP" id="epl-x6-7P5">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Website" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bfQ-AE-wm4">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="VwR-ei-uN5" style="IBUITableViewCellStyleDefault" id="NAR-ML-pQb">
+                                        <rect key="frame" x="0.0" y="99.333333333333343" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NAR-ML-pQb" id="ANp-P1-a0P">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Help and Feedback" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VwR-ei-uN5">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="ano-WA-Dvf" style="IBUITableViewCellStyleDefault" id="N7N-Dr-aRG">
+                                        <rect key="frame" x="0.0" y="143.33333333333334" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="N7N-Dr-aRG" id="din-pA-bVy">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Terms and Conditions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ano-WA-Dvf">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="e5c-S3-hZD" id="y7c-Yf-7So"/>
+                            <outlet property="delegate" destination="e5c-S3-hZD" id="Kw7-PH-6iU"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Settings" id="Kda-7n-Tby"/>
+                    <connections>
+                        <outlet property="settingsTableVIew" destination="d7N-j1-TiR" id="TRl-6A-ale"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gMz-K8-toK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="400.00000000000006" y="1342.663043478261"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="NFA-sa-XoH">
+            <objects>
+                <navigationController id="IY9-8g-ghn" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Settings" image="IconSettings" id="gH9-lA-RlK">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-3"/>
                     </tabBarItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kvZ-7Z-qCi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="0VT-PG-3yR">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="e5c-S3-hZD" kind="relationship" relationship="rootViewController" id="Ji9-4m-SDI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FAT-6x-s7X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1087" y="1343"/>
+            <point key="canvasLocation" x="-455" y="1343"/>
         </scene>
         <!--Bookmarks-->
         <scene sceneID="Xpf-0q-Tl9">
@@ -132,7 +199,9 @@
                     <tabBarItem key="tabBarItem" title="Bookmarks" image="IconBookmark" id="keM-KI-XO2">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-3"/>
                     </tabBarItem>
-                    <navigationItem key="navigationItem" title="Bookmarks" id="LET-Ut-RjW"/>
+                    <navigationItem key="navigationItem" title="Bookmarks" id="LET-Ut-RjW">
+                        <barButtonItem key="backBarButtonItem" title=" " id="TsV-dh-pk1"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="bookmarksTableView" destination="hOi-wM-RRZ" id="bOY-EX-8U8"/>
                         <outlet property="buttonGoToExplore" destination="TAT-ud-Pkm" id="gF0-Y8-QjO"/>
@@ -250,7 +319,9 @@
                     <tabBarItem key="tabBarItem" title="Search" image="IconSearch" id="SaY-Ww-Yq3">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-3"/>
                     </tabBarItem>
-                    <navigationItem key="navigationItem" title="Search" id="fpv-t6-OSK"/>
+                    <navigationItem key="navigationItem" title="Search" id="fpv-t6-OSK">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Jaw-Zk-Ffx"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="UNY-du-AM5" id="i5z-W4-Rqi"/>
                         <outlet property="searchNoneView" destination="scQ-Uq-4dI" id="Gi0-OF-0B3"/>
@@ -377,7 +448,9 @@
                     <tabBarItem key="tabBarItem" title="Explore" image="IconCompass" id="Scb-nM-e0z">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-3"/>
                     </tabBarItem>
-                    <navigationItem key="navigationItem" title="Explore" id="2ds-UW-eDD"/>
+                    <navigationItem key="navigationItem" title="Explore" id="2ds-UW-eDD">
+                        <barButtonItem key="backBarButtonItem" title=" " id="UPD-lN-ILA"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="uYr-4S-nWo" id="d59-oC-qCq"/>
                         <segue destination="gcc-ao-MSO" kind="show" identifier="goToTopicView" id="8lr-En-kXO"/>
@@ -432,7 +505,7 @@
                         <viewLayoutGuide key="safeArea" id="MLv-It-dG2"/>
                     </view>
                     <navigationItem key="navigationItem" title="Topic Title" id="1vB-p4-rlc">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="81n-DN-LF1"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="DBZ-jX-fkk"/>
                     </navigationItem>
                     <connections>
                         <outlet property="articleTableView" destination="OZ0-Eu-AgL" id="T3X-KL-puW"/>
@@ -487,7 +560,7 @@
                         <viewLayoutGuide key="safeArea" id="8Wy-0W-kwW"/>
                     </view>
                     <navigationItem key="navigationItem" title="Article Title" id="6Gr-JR-2AD">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="TET-Nc-wop"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="hv0-XH-Ipt"/>
                         <barButtonItem key="rightBarButtonItem" image="IconBookmark" id="WY6-U1-bld">
                             <connections>
                                 <action selector="bookmarkPressed:" destination="Zls-g5-KVa" id="VMe-rV-zRC"/>
@@ -515,7 +588,7 @@
                         <segue destination="yN5-en-RYQ" kind="relationship" relationship="viewControllers" id="ZyU-y0-si4"/>
                         <segue destination="Axy-bo-pmx" kind="relationship" relationship="viewControllers" id="SGm-FW-CK5"/>
                         <segue destination="QRe-rE-geQ" kind="relationship" relationship="viewControllers" id="iFF-Pm-SNl"/>
-                        <segue destination="ajC-4o-yww" kind="relationship" relationship="viewControllers" id="fcy-8I-eA4"/>
+                        <segue destination="IY9-8g-ghn" kind="relationship" relationship="viewControllers" id="xLB-Kc-jWR"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vo3-Q8-zYL" userLabel="First Responder" sceneMemberID="firstResponder"/>
