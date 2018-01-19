@@ -8,11 +8,8 @@ target 'AlgorithmHelper' do
   # Pods for AlgorithmHelper
   
     pod 'Firebase'
-    pod 'Firebase/Auth'
-    pod 'Firebase/Database'
     pod 'Firebase/Storage'
     pod 'SVProgressHUD'
-    pod 'ChameleonFramework'
     pod 'Down'
 
 end

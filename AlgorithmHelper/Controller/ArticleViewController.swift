@@ -36,11 +36,11 @@ class ArticleViewController: UIViewController {
         key = "\(categoryURL)\(topicURL)\(articleURL)"
         self.navigationItem.title = articleTitle
         setArticleContent()
-        setBookmark(forUpdate: false)
+        setBookmark()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        setBookmark(forUpdate: false)
+        setBookmark()
     }
     
     // MARK: - Create Firebase URLS from article title, topic title, and category title
@@ -69,25 +69,24 @@ class ArticleViewController: UIViewController {
     }
     
     // MARK: - Set article's bookmark
-    func setBookmark(forUpdate: Bool) {
-        if Content.instance().hasBookmark(categoryIndex: categoryIndex, topicIndex: topicIndex, articleIndex: articleIndex) {
+    func setBookmark() {
+        if Bookmarks.instance().isBookmarked(key: key) {
             articleBookmark.image = UIImage(named: "IconBookmarkDark")
-            
-            if forUpdate {
-                Bookmarks.instance().addBookmark(key: key, categoryIndex: categoryIndex, topicIndex: topicIndex, articleIndex: articleIndex)
-            }
         } else {
             articleBookmark.image = UIImage(named: "IconBookmark")
-            
-            if forUpdate {
-                Bookmarks.instance().deleteBookmark(key: key)
-            }
         }
     }
     
     // MARK: - Toggle bookmark
     @IBAction func bookmarkPressed(_ sender: Any) {
-        Content.instance().toggleBookmark(categoryIndex: categoryIndex, topicIndex: topicIndex, articleIndex: articleIndex)
-        setBookmark(forUpdate: true)
+        if Bookmarks.instance().isBookmarked(key: key) {
+            Bookmarks.instance().deleteBookmark(key: key)
+        } else {
+            Bookmarks.instance().addBookmark(key: key,
+                                             categoryIndex: categoryIndex,
+                                             topicIndex: topicIndex,
+                                             articleIndex: articleIndex)
+        }
+        setBookmark()
     }
 }

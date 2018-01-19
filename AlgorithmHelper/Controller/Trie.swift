@@ -37,7 +37,7 @@ class Trie<V> {
     }
     
     func get(key: String) -> V? {
-        var x: Node? = get(x: root, key: key, d: 0)
+        let x: Node? = get(x: root, key: key, d: 0)
         
         if x == nil {
             return nil
@@ -100,7 +100,7 @@ class Trie<V> {
     
     func getKeysWithPrefix(prefix: String) -> [String] {
         var results = [String]()
-        var x = get(x: root, key: prefix, d: 0)
+        let x = get(x: root, key: prefix, d: 0)
         collect(x: x, prefix: prefix, results: &results)
         return results
     }

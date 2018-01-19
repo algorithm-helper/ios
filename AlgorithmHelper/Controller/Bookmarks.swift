@@ -43,6 +43,10 @@ class Bookmarks {
         return bookmarksArray
     }
     
+    func isBookmarked(key: String) -> Bool {
+        return bookmarksDict[key] != nil
+    }
+    
     func addBookmark(key: String, categoryIndex: Int, topicIndex: Int, articleIndex: Int) {
         bookmarksDict[key] = ["categoryIndex": categoryIndex,
                               "topicIndex": topicIndex,
@@ -51,10 +55,6 @@ class Bookmarks {
     
     func deleteBookmark(key: String) {
         bookmarksDict[key] = nil
-    }
-    
-    func removeBookmark(key: String) -> [String: Int] {
-        return bookmarksDict.removeValue(forKey: key)!
     }
     
     func save() {

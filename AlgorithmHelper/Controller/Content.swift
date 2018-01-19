@@ -41,7 +41,7 @@ class Content {
                         for article in articleList {
                             let title = article["title"] as! String
                             let url = article["article"] as! String
-                            articleListFinal.append(Article(title: title, url: url, isBookmarked: false))
+                            articleListFinal.append(Article(title: title, url: url))
                         }
                         topicListFinal.append(Topic(title: title, url: url, image: image, articleList: articleListFinal))
                     }
@@ -72,12 +72,12 @@ class Content {
         return categoryList[categoryIndex]
     }
     
-    func hasBookmark(categoryIndex: Int, topicIndex: Int, articleIndex: Int) -> Bool {
-        return categoryList[categoryIndex].topicList[topicIndex].articleList[articleIndex].isBookmarked
-    }
-    
-    func toggleBookmark(categoryIndex: Int, topicIndex: Int, articleIndex: Int) {
-        categoryList[categoryIndex].topicList[topicIndex].articleList[articleIndex].isBookmarked =
-        !categoryList[categoryIndex].topicList[topicIndex].articleList[articleIndex].isBookmarked
-    }
+//    func hasBookmark(categoryIndex: Int, topicIndex: Int, articleIndex: Int) -> Bool {
+//        return categoryList[categoryIndex].topicList[topicIndex].articleList[articleIndex].isBookmarked
+//    }
+//
+//    func toggleBookmark(categoryIndex: Int, topicIndex: Int, articleIndex: Int) {
+//        categoryList[categoryIndex].topicList[topicIndex].articleList[articleIndex].isBookmarked =
+//        !categoryList[categoryIndex].topicList[topicIndex].articleList[articleIndex].isBookmarked
+//    }
 }
