@@ -12,20 +12,17 @@ class Article: Encodable, Decodable {
     
     var title: String = ""
     var url: String = ""
-    var description: String = ""
     var isBookmarked: Bool = false
     
     init() {
         title = ""
         url = ""
-        description = ""
         isBookmarked = false
     }
     
-    init(title: String, url: String, description: String, isBookmarked: Bool) {
+    init(title: String, url: String, isBookmarked: Bool) {
         self.title = title
         self.url = url
-        self.description = description
         self.isBookmarked = isBookmarked
     }
 }

@@ -85,6 +85,7 @@ class ArticleViewController: UIViewController {
         }
     }
     
+    // MARK: - Toggle bookmark
     @IBAction func bookmarkPressed(_ sender: Any) {
         Content.instance().toggleBookmark(categoryIndex: categoryIndex, topicIndex: topicIndex, articleIndex: articleIndex)
         setBookmark(forUpdate: true)

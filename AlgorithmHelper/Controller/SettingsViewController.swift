@@ -20,6 +20,7 @@ class SettingsViewController: UITableViewController {
         settingsTableVIew.delegate = self
     }
     
+    // MARK: - Configure settingsTableView to have their corresponding URLs
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let urlString = urls[indexPath.row]
         if let url = URL(string: urlString) {
@@ -27,12 +28,13 @@ class SettingsViewController: UITableViewController {
         }
     }
     
+    // MARK: - Configure settingsTableView header to have a custom header
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView()
         headerView.backgroundColor = UIColor.clear
-        let headerLabel = UILabel(frame: CGRect(x: 18, y: 15, width:
+        let headerLabel = UILabel(frame: CGRect(x: 18, y: 13, width:
             tableView.bounds.size.width, height: tableView.bounds.size.height))
-        headerLabel.font = UIFont(name: "Avenir-Bold", size: 18)
+        headerLabel.font = UIFont(name: "Avenir-Bold", size: 16)
         headerLabel.textColor = UIColor.black
         headerLabel.text = "General"
         headerLabel.sizeToFit()
@@ -45,6 +47,7 @@ class SettingsViewController: UITableViewController {
         return 40
     }
     
+    // MARK: - Configure settingsTableView footer to have a custom footer
     override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let headerView = UIView()
         headerView.backgroundColor = UIColor.clear

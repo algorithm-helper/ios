@@ -20,27 +20,26 @@ class TopicViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Set this TopicViewController as the delegate and dataSource to the articleTableView:
         articleTableView.delegate = self
         articleTableView.dataSource = self
-        
         topicTitle = Content.instance().getCategoryList()[categoryIndex].topicList[topicIndex].title
         numRows = Content.instance().getCategoryList()[categoryIndex].topicList[topicIndex].articleList.count
         self.navigationItem.title = topicTitle
     }
     
-    // MARK: - Setup UITableView
+    // MARK: - Configure articleTableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return numRows
     }
     
+    // MARK: - Populate articleTableView cells with corresponding article titles
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "articleTableViewCell", for: indexPath) as! ArticleTableViewCell
         cell.articleLabel.text = Content.instance().getCategoryList()[categoryIndex].topicList[topicIndex].articleList[indexPath.row].title
         return cell
     }
     
+    // MARK: - Prepare for seugue to ArticleViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         let dest = segue.destination as! ArticleViewController
         dest.categoryIndex = categoryIndex
@@ -48,6 +47,7 @@ class TopicViewController: UIViewController, UITableViewDelegate, UITableViewDat
         dest.articleIndex = articleIndexSelected
     }
     
+    // MARK: - Perform segue to ArticleViewController
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         articleIndexSelected = indexPath.row
         performSegue(withIdentifier: "goToArticleView", sender: self)

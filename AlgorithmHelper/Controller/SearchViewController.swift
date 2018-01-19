@@ -27,6 +27,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDa
         hideKeyboard()
     }
     
+    // MARK: - Show searchNoneView only if the searchBar is empty
     override func viewDidAppear(_ animated: Bool) {
         searchNoneView.isHidden = searchBar.text?.count != 0
     }
@@ -44,11 +45,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDa
         view.endEditing(true)
     }
     
-    // MARK: - Setup no search view
-    func setupNoSearchView() {
-        searchNoneView.isHidden = false
-    }
-    
+    // MARK: - Normalize the text in the searchBar, update search results from SearchIndex singleton
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.count >= 1 {
             let searchKey = searchText.replacingOccurrences(of: "[^0-9a-zA-Z]", with: "",
@@ -69,6 +66,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDa
         return searchResultRows
     }
     
+    // MARK: - Update cell in the searchTableView with the correct info
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "searchTableViewCell") as! SearchTableViewCell
         let articleTitle = Content.instance().getArticle(categoryIndex: searchResults[indexPath.row]["categoryIndex"]!,
@@ -82,7 +80,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDa
         return cell
     }
     
-    // MARK: - Segue to article
+    // MARK: - Update segue's destination category/topic/article indices, reset the tableView
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dest = segue.destination as! ArticleViewController
         dest.categoryIndex = selected[0]
@@ -90,6 +88,7 @@ class SearchViewController: UIViewController, UISearchBarDelegate, UITableViewDa
         dest.articleIndex = selected[2]
     }
     
+    // MARK: - Perform segue to the ArticleViewController
     func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
         let cellData: [String: Int] = searchResults[indexPath.row]
         selected[0] = cellData["categoryIndex"]!

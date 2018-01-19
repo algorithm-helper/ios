@@ -18,6 +18,7 @@ class Bookmarks {
     
     private static let bookmarksSingleton = Bookmarks()
     
+    // MARK: - Return singleton instance of Bookmarks
     static func instance() -> Bookmarks {
         return bookmarksSingleton
     }
@@ -56,8 +57,7 @@ class Bookmarks {
         return bookmarksDict.removeValue(forKey: key)!
     }
     
-    // TODO: - Save the data of BookmarksSingleton on close of the app
-    func saveData() {
+    func save() {
         
     }
 }

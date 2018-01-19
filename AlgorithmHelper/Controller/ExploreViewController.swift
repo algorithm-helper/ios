@@ -23,11 +23,12 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
         tableView.dataSource = self
     }
     
-    // MARK: - Setup UITableView, give every cell row an index number
+    // MARK: - Configure tableView to have one row per section
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
+    // MARK: - Give every cell of the tableView an index based on its row index
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! CategoryRow
         cell.index = cellRowIndex
@@ -40,6 +41,7 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
         return Content.instance().getCategoryList().count
     }
     
+    // MARK: - Configure tableView header to have a custom font
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView()
         headerView.backgroundColor = UIColor.white
@@ -58,13 +60,14 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
         return 40
     }
     
-    // MARK: - Segue to Topic View Controller
+    // MARK: - Set the TopicViewController's categoryIndex and topicIndex properties
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         let dest = segue.destination as! TopicViewController
         dest.categoryIndex = categoryIndexSelected
         dest.topicIndex = topicIndexSelected
     }
     
+    // MARK: - Perform segue to the TopicViewController
     func performSegueToTopicViewController(categoryIndex: Int, topicIndex: Int) {
         categoryIndexSelected = categoryIndex
         topicIndexSelected = topicIndex

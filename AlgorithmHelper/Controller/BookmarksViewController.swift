@@ -29,11 +29,12 @@ class BookmarksViewController: UIViewController, UITableViewDelegate, UITableVie
         bookmarksTableView.reloadData()
     }
     
+    // MARK: - Change tab to Explore when buttonGoToExplore pressed
     @IBAction func goToExploreButtonPressed(_ sender: UIButton) {
         tabBarController?.selectedIndex = 0;
     }
     
-    // MARK: - Setup no bookmarks view, i.e. view that is shown when no bookmarks have been added yet
+    // MARK: - Setup noBookmarksView
     func setupNoBookmarksView() {
         if Bookmarks.instance().getBookmarksDict().isEmpty {
             bookmarksTableView.isHidden = true
@@ -45,11 +46,12 @@ class BookmarksViewController: UIViewController, UITableViewDelegate, UITableVie
         }
     }
     
-    // MARK: - Setup table view
+    // MARK: - Configure bookmarksTableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return Bookmarks.instance().getBookmarksDict().count
     }
     
+    // MARK: - Populate bookmarksTableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "bookmarksTableViewCell", for: indexPath) as! BookmarksTableViewCell
         let cellData: [String: Int] = bookmarksArray[indexPath.row]
@@ -61,7 +63,7 @@ class BookmarksViewController: UIViewController, UITableViewDelegate, UITableVie
         return cell
     }
     
-    // MARK: - Prepare and perform segue change to ArticleView
+    // MARK: - Prepare segue change to ArticleViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dest = segue.destination as! ArticleViewController
         dest.categoryIndex = selected[0]
@@ -69,6 +71,7 @@ class BookmarksViewController: UIViewController, UITableViewDelegate, UITableVie
         dest.articleIndex = selected[2]
     }
     
+    // MARK: - Perform segue change to ArticleViewController
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cellData: [String: Int] = bookmarksArray[indexPath.row]
         selected[0] = cellData["categoryIndex"]!

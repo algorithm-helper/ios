@@ -2,9 +2,6 @@
 //  Content.swift
 //  AlgorithmHelper
 //
-//  Provides a singleton instance of Content, which has the Category/Topic/Article data
-//  in their respective tree structure.
-//
 //  Created by Eric Liu on 2018-01-16.
 //  Copyright © 2018 Eric Liu. All rights reserved.
 //
@@ -15,9 +12,6 @@ import UIKit
 class Content {
     
     private var categoryList = [Category]()
-    private var colorList: [UIColor] = [UIColor(red: 0.2, green: 0.7098, blue: 0.898, alpha: 1.0),
-                                        UIColor(red: 0.6667, green: 0.4, blue: 0.8, alpha: 1.0),
-                                        UIColor(red: 0.3765, green: 0.4902, blue: 0.5451, alpha: 1.0)]
     
     private static let contentSingleton = Content()
     
@@ -47,8 +41,7 @@ class Content {
                         for article in articleList {
                             let title = article["title"] as! String
                             let url = article["article"] as! String
-                            let description = article["description"] as! String
-                            articleListFinal.append(Article(title: title, url: url, description: description, isBookmarked: false))
+                            articleListFinal.append(Article(title: title, url: url, isBookmarked: false))
                         }
                         topicListFinal.append(Topic(title: title, url: url, image: image, articleList: articleListFinal))
                     }
@@ -67,19 +60,6 @@ class Content {
         return categoryList
     }
     
-    func getColor(categoryIndex: Int) -> UIColor {
-        return colorList[categoryIndex]
-    }
-    
-    func hasBookmark(categoryIndex: Int, topicIndex: Int, articleIndex: Int) -> Bool {
-        return categoryList[categoryIndex].topicList[topicIndex].articleList[articleIndex].isBookmarked
-    }
-    
-    func toggleBookmark(categoryIndex: Int, topicIndex: Int, articleIndex: Int) {
-        categoryList[categoryIndex].topicList[topicIndex].articleList[articleIndex].isBookmarked =
-        !categoryList[categoryIndex].topicList[topicIndex].articleList[articleIndex].isBookmarked
-    }
-    
     func getArticle(categoryIndex: Int, topicIndex: Int, articleIndex: Int) -> Article {
         return categoryList[categoryIndex].topicList[topicIndex].articleList[articleIndex]
     }
@@ -92,8 +72,12 @@ class Content {
         return categoryList[categoryIndex]
     }
     
-    // TODO: - Save the data of ContentSingleton on close of the app
-    func save() {
-        
+    func hasBookmark(categoryIndex: Int, topicIndex: Int, articleIndex: Int) -> Bool {
+        return categoryList[categoryIndex].topicList[topicIndex].articleList[articleIndex].isBookmarked
+    }
+    
+    func toggleBookmark(categoryIndex: Int, topicIndex: Int, articleIndex: Int) {
+        categoryList[categoryIndex].topicList[topicIndex].articleList[articleIndex].isBookmarked =
+        !categoryList[categoryIndex].topicList[topicIndex].articleList[articleIndex].isBookmarked
     }
 }
