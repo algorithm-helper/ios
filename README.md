@@ -11,13 +11,16 @@ iOS devices running iOS 11+ (iPhone/iPad/iPod Touch).
         <td>
             <img src="https://media.giphy.com/media/xULW8vrhRjtBv3UJ8c/giphy.gif" width="250px">
         </td>
+        <td>
+            <img src="https://media.giphy.com/media/3o752doQfjDlKLXmaA/giphy.gif" width="250px">
+        </td>
     </tr>
 </table>
 
 ### Features
 
 - Clean, minimalistic UI
-- Efficient search using r-way trie
+- Efficient search using r-way trie to build search index
 - Retrieves articles from Firebase Storage
 - Markdown articles rendered dynamically using [Down](https://github.com/iwasrobbed/Down)
 
