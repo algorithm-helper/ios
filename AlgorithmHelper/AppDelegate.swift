@@ -65,7 +65,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Save Bookmarks singleton data:
         Bookmarks.instance().save()
     }
-
-
 }
 
